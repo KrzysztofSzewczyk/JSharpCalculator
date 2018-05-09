@@ -1,0 +1,29 @@
+package calculator.model;
+
+import System.Runtime.Serialization.*;
+
+/**
+ * Exception used for indicating invalid input for a given Operation
+ */
+/** @attribute System.Serializable() */
+public class OperationParameterException extends IllegalArgumentException
+{
+	public OperationParameterException()
+	{
+	}
+
+	public OperationParameterException(String message)
+	{
+		super(message);
+	}
+
+	public OperationParameterException(String message, System.Exception inner)
+	{
+		super(message, inner);
+	}
+
+	protected OperationParameterException(SerializationInfo info, StreamingContext context)
+	{
+		super(info, context);
+	}
+}

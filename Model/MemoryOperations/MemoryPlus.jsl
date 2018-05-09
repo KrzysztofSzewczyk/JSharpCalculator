@@ -1,0 +1,16 @@
+package calculator.model.memoryOperations;
+
+import calculator.model.*;
+
+public class MemoryPlus extends MemoryOperation
+{
+	public void operate(OperandStack ops)
+	{
+		memory += ops.peek();
+	}
+
+	public OperationType getType()
+	{
+		return OperationType.Unary;
+	}
+}

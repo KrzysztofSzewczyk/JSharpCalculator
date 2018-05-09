@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C474D7BF-1581-4C8C-9D64-DD4911A333CB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Calculator</RootNamespace>
+    <AssemblyName>JSharpCalculator</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calculator.jsl" />
+    <Content Include="Help\Index.htm">
+      <SubType>Preview</SubType>
+    </Content>
+    <Compile Include="Properties\AssemblyInfo.jsl" />
+    <Compile Include="Model\BinaryOperations\Addition.jsl" />
+    <Compile Include="Model\Mode\Base.jsl" />
+    <Compile Include="Model\BinaryOperations\BinaryOperation.jsl" />
+    <Compile Include="Model\Display.jsl" />
+    <Compile Include="Model\BinaryOperations\Division.jsl" />
+    <Compile Include="Model\Engine.jsl" />
+    <Compile Include="Model\UnaryOperations\Equals.jsl" />
+    <Compile Include="Model\UnaryOperations\Exponential.jsl" />
+    <Compile Include="Model\OperationType.jsl" />
+    <Compile Include="Model\UnaryOperations\FEMode.jsl" />
+    <Compile Include="Model\MemoryOperations\MemoryOperation.jsl" />
+    <Compile Include="Model\MemoryOperations\MemoryPlus.jsl" />
+    <Compile Include="Model\MemoryOperations\MemoryRead.jsl" />
+    <Compile Include="Model\MemoryOperations\MemorySet.jsl" />
+    <Compile Include="Model\Mode\Mode.jsl" />
+    <Compile Include="Model\BinaryOperations\Multiplication.jsl" />
+    <Compile Include="Model\UnaryOperations\NaturalLog.jsl" />
+    <Compile Include="Model\OperandStack.jsl" />
+    <Compile Include="Model\Operation.jsl" />
+    <Compile Include="Model\OperationParameterException.jsl" />
+    <Compile Include="Model\OperationStack.jsl" />
+    <Compile Include="Model\BinaryOperations\Mod.jsl" />
+    <Compile Include="Model\BinaryOperations\Permutation.jsl" />
+    <Compile Include="Model\ZeroaryOperations\Pi.jsl" />
+    <Compile Include="Model\Precedence.jsl" />
+    <Compile Include="Model\UnaryOperations\Sine.jsl" />
+    <Compile Include="Model\UnaryOperations\Square.jsl" />
+    <Compile Include="Model\BinaryOperations\Subtraction.jsl" />
+    <Compile Include="Model\UnaryOperations\UnaryOperation.jsl" />
+    <Compile Include="Model\Mode\AngleMode.jsl" />
+    <Compile Include="Model\ZeroaryOperations\ZeroaryOperation.jsl" />
+    <Compile Include="UI\CalculatorForm.jsl">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="UI\CalculatorForm.resx">
+      <DependentUpon>CalculatorForm.jsl</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="UI\Calc.ico" />
+    <Content Include="Help\index_files\image002.jpg" />
+    <Content Include="Help\index_files\image003.jpg" />
+    <Content Include="Help\index_files\image004.jpg" />
+    <Content Include="Help\index_files\image005.jpg" />
+    <Content Include="Help\index_files\image006.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualJSharp.targets" />
+  <PropertyGroup>
+    <ApplicationIcon>UI\Calc.ico</ApplicationIcon>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

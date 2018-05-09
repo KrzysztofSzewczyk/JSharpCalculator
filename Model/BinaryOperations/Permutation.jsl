@@ -1,0 +1,42 @@
+package calculator.model.binaryOperations;
+
+import calculator.model.*;
+
+public class Permutation extends BinaryOperation
+{
+	public double operateBinary(double n, double r)
+	{
+		// n and r should be integral values
+		double rfloor = Math.floor(r);
+		double nfloor = Math.floor(n);
+
+		// Check for all invalid values of n and r.
+		if ((n < 1) || (r < 0) || (r > n) || (r != rfloor) || (n != nfloor))
+		{
+			throw new OperationParameterException("Invalid Input to Permutation Function");
+		}
+
+		// Limit r to 175 as r >= 175 will result in value > Double.MAX_VALUE
+		// i.e. infinity. This is done to prevent going into big for loop.
+		if (r >= 175.0)
+		{
+			throw new OperationParameterException("Infinity");
+		}
+
+		double result = 1;
+
+		// Loop on r and not n-r as n-r can be huge resulting in rounding
+		// off error while doing ++ operation and possible infinite loop.
+		for (double i = 0; i < r; i++)
+		{
+			result *= (n - i);
+		}
+
+		return result;
+	}
+
+	public Precedence getPrecedence()
+	{
+		return Precedence.Permutation;
+	}
+}

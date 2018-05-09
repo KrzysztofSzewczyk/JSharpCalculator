@@ -1,0 +1,11 @@
+package calculator.model.zeroaryOperations;
+
+import calculator.model.*;
+
+public class Pi extends ZeroaryOperation
+{
+	public void operate(OperandStack ops)
+	{
+		ops.push(Math.PI);
+	}
+}

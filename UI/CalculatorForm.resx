@@ -1,0 +1,2408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tlpLeft.ColumnCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnEmpty1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnEmpty1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="btnEmpty1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnEmpty1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnEmpty1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty1.Name" xml:space="preserve">
+    <value>btnEmpty1</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty1.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnCombination.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnCombination.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 1</value>
+  </data>
+  <data name="btnCombination.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnCombination.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnCombination.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnCombination.Text" xml:space="preserve">
+    <value>nCr</value>
+  </data>
+  <data name="&gt;&gt;btnCombination.Name" xml:space="preserve">
+    <value>btnCombination</value>
+  </data>
+  <data name="&gt;&gt;btnCombination.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCombination.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnCombination.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnEmpty2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnEmpty2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 35</value>
+  </data>
+  <data name="btnEmpty2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnEmpty2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnEmpty2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty2.Name" xml:space="preserve">
+    <value>btnEmpty2</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty2.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnPermutation.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnPermutation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 35</value>
+  </data>
+  <data name="btnPermutation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnPermutation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnPermutation.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnPermutation.Text" xml:space="preserve">
+    <value>nPr</value>
+  </data>
+  <data name="&gt;&gt;btnPermutation.Name" xml:space="preserve">
+    <value>btnPermutation</value>
+  </data>
+  <data name="&gt;&gt;btnPermutation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPermutation.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnPermutation.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnOneByX.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnOneByX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 1</value>
+  </data>
+  <data name="btnOneByX.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnOneByX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnOneByX.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnOneByX.Text" xml:space="preserve">
+    <value>1/x</value>
+  </data>
+  <data name="&gt;&gt;btnOneByX.Name" xml:space="preserve">
+    <value>btnOneByX</value>
+  </data>
+  <data name="&gt;&gt;btnOneByX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnOneByX.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnOneByX.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnFeMode.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnFeMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 1</value>
+  </data>
+  <data name="btnFeMode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnFeMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnFeMode.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnFeMode.Text" xml:space="preserve">
+    <value>F-E</value>
+  </data>
+  <data name="&gt;&gt;btnFeMode.Name" xml:space="preserve">
+    <value>btnFeMode</value>
+  </data>
+  <data name="&gt;&gt;btnFeMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFeMode.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnFeMode.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnSquareRoot.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnSquareRoot.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 35</value>
+  </data>
+  <data name="btnSquareRoot.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnSquareRoot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnSquareRoot.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnSquareRoot.Text" xml:space="preserve">
+    <value>sqrt</value>
+  </data>
+  <data name="&gt;&gt;btnSquareRoot.Name" xml:space="preserve">
+    <value>btnSquareRoot</value>
+  </data>
+  <data name="&gt;&gt;btnSquareRoot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSquareRoot.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnSquareRoot.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnFactorial.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnFactorial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 35</value>
+  </data>
+  <data name="btnFactorial.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnFactorial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnFactorial.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnFactorial.Text" xml:space="preserve">
+    <value>n!</value>
+  </data>
+  <data name="&gt;&gt;btnFactorial.Name" xml:space="preserve">
+    <value>btnFactorial</value>
+  </data>
+  <data name="&gt;&gt;btnFactorial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFactorial.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnFactorial.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnEmpty3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnEmpty3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 69</value>
+  </data>
+  <data name="btnEmpty3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnEmpty3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnEmpty3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty3.Name" xml:space="preserve">
+    <value>btnEmpty3</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty3.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnSine.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnSine.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 69</value>
+  </data>
+  <data name="btnSine.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnSine.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnSine.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnSine.Text" xml:space="preserve">
+    <value>sin</value>
+  </data>
+  <data name="&gt;&gt;btnSine.Name" xml:space="preserve">
+    <value>btnSine</value>
+  </data>
+  <data name="&gt;&gt;btnSine.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSine.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnSine.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnPower.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnPower.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 69</value>
+  </data>
+  <data name="btnPower.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnPower.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnPower.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnPower.Text" xml:space="preserve">
+    <value>x^y</value>
+  </data>
+  <data name="&gt;&gt;btnPower.Name" xml:space="preserve">
+    <value>btnPower</value>
+  </data>
+  <data name="&gt;&gt;btnPower.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPower.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnPower.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btnLog.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 69</value>
+  </data>
+  <data name="btnLog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnLog.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnLog.Text" xml:space="preserve">
+    <value>log</value>
+  </data>
+  <data name="&gt;&gt;btnLog.Name" xml:space="preserve">
+    <value>btnLog</value>
+  </data>
+  <data name="&gt;&gt;btnLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLog.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnLog.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btnNaturalLog.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnNaturalLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 103</value>
+  </data>
+  <data name="btnNaturalLog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnNaturalLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnNaturalLog.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnNaturalLog.Text" xml:space="preserve">
+    <value>ln</value>
+  </data>
+  <data name="&gt;&gt;btnNaturalLog.Name" xml:space="preserve">
+    <value>btnNaturalLog</value>
+  </data>
+  <data name="&gt;&gt;btnNaturalLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNaturalLog.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnNaturalLog.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="btnCube.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnCube.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 103</value>
+  </data>
+  <data name="btnCube.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnCube.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnCube.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnCube.Text" xml:space="preserve">
+    <value>x^3</value>
+  </data>
+  <data name="&gt;&gt;btnCube.Name" xml:space="preserve">
+    <value>btnCube</value>
+  </data>
+  <data name="&gt;&gt;btnCube.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCube.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnCube.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="btnExponential.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnExponential.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 137</value>
+  </data>
+  <data name="btnExponential.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnExponential.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnExponential.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnExponential.Text" xml:space="preserve">
+    <value>Exp</value>
+  </data>
+  <data name="&gt;&gt;btnExponential.Name" xml:space="preserve">
+    <value>btnExponential</value>
+  </data>
+  <data name="&gt;&gt;btnExponential.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExponential.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnExponential.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="btnSquare.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnSquare.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 137</value>
+  </data>
+  <data name="btnSquare.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnSquare.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnSquare.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnSquare.Text" xml:space="preserve">
+    <value>x^2</value>
+  </data>
+  <data name="&gt;&gt;btnSquare.Name" xml:space="preserve">
+    <value>btnSquare</value>
+  </data>
+  <data name="&gt;&gt;btnSquare.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSquare.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnSquare.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="btnEmpty4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnEmpty4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 103</value>
+  </data>
+  <data name="btnEmpty4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnEmpty4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnEmpty4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty4.Name" xml:space="preserve">
+    <value>btnEmpty4</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty4.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty4.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="btnCosine.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnCosine.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 103</value>
+  </data>
+  <data name="btnCosine.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnCosine.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnCosine.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnCosine.Text" xml:space="preserve">
+    <value>cos</value>
+  </data>
+  <data name="&gt;&gt;btnCosine.Name" xml:space="preserve">
+    <value>btnCosine</value>
+  </data>
+  <data name="&gt;&gt;btnCosine.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCosine.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnCosine.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="btnTangent.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnTangent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 137</value>
+  </data>
+  <data name="btnTangent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnTangent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnTangent.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnTangent.Text" xml:space="preserve">
+    <value>tan</value>
+  </data>
+  <data name="&gt;&gt;btnTangent.Name" xml:space="preserve">
+    <value>btnTangent</value>
+  </data>
+  <data name="&gt;&gt;btnTangent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnTangent.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnTangent.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="btnEmpty5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnEmpty5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 137</value>
+  </data>
+  <data name="btnEmpty5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnEmpty5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnEmpty5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty5.Name" xml:space="preserve">
+    <value>btnEmpty5</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty5.Parent" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty5.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="tlpLeft.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="tlpLeft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tlpLeft.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="tlpLeft.RowCount" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tlpLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 174</value>
+  </data>
+  <data name="tlpLeft.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tlpLeft.Name" xml:space="preserve">
+    <value>tlpLeft</value>
+  </data>
+  <data name="&gt;&gt;tlpLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpLeft.Parent" xml:space="preserve">
+    <value>tlpButtons</value>
+  </data>
+  <data name="&gt;&gt;tlpLeft.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpLeft.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnEmpty1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnCombination" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnEmpty2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnPermutation" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnOneByX" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btnFeMode" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnSquareRoot" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btnFactorial" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnEmpty3" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnSine" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnPower" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btnLog" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnNaturalLog" Row="3" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnCube" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btnExponential" Row="4" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnSquare" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btnEmpty4" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnCosine" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnTangent" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnEmpty5" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;Rows Styles="Percent,20,Percent,20,Percent,20,Percent,20,Percent,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="tlpRight.ColumnCount" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnDigitEight.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitEight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 1</value>
+  </data>
+  <data name="btnDigitEight.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitEight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitEight.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitEight.Text" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btnDigitEight.Name" xml:space="preserve">
+    <value>btnDigitEight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitEight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitEight.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitEight.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnDigitFour.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitFour.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 35</value>
+  </data>
+  <data name="btnDigitFour.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitFour.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitFour.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitFour.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnDigitFour.Name" xml:space="preserve">
+    <value>btnDigitFour</value>
+  </data>
+  <data name="&gt;&gt;btnDigitFour.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitFour.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitFour.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnDigitFive.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitFive.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 35</value>
+  </data>
+  <data name="btnDigitFive.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitFive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitFive.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitFive.Text" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnDigitFive.Name" xml:space="preserve">
+    <value>btnDigitFive</value>
+  </data>
+  <data name="&gt;&gt;btnDigitFive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitFive.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitFive.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnDigitNine.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitNine.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 1</value>
+  </data>
+  <data name="btnDigitNine.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitNine.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitNine.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitNine.Text" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;btnDigitNine.Name" xml:space="preserve">
+    <value>btnDigitNine</value>
+  </data>
+  <data name="&gt;&gt;btnDigitNine.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitNine.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitNine.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnDigitSix.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitSix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 35</value>
+  </data>
+  <data name="btnDigitSix.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitSix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitSix.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitSix.Text" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnDigitSix.Name" xml:space="preserve">
+    <value>btnDigitSix</value>
+  </data>
+  <data name="&gt;&gt;btnDigitSix.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitSix.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitSix.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnDigitOne.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitOne.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 69</value>
+  </data>
+  <data name="btnDigitOne.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitOne.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitOne.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitOne.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnDigitOne.Name" xml:space="preserve">
+    <value>btnDigitOne</value>
+  </data>
+  <data name="&gt;&gt;btnDigitOne.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitOne.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitOne.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnDigitTwo.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitTwo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 69</value>
+  </data>
+  <data name="btnDigitTwo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitTwo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitTwo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitTwo.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnDigitTwo.Name" xml:space="preserve">
+    <value>btnDigitTwo</value>
+  </data>
+  <data name="&gt;&gt;btnDigitTwo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitTwo.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitTwo.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnMemoryRead.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnMemoryRead.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 35</value>
+  </data>
+  <data name="btnMemoryRead.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnMemoryRead.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnMemoryRead.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnMemoryRead.Text" xml:space="preserve">
+    <value>MR</value>
+  </data>
+  <data name="&gt;&gt;btnMemoryRead.Name" xml:space="preserve">
+    <value>btnMemoryRead</value>
+  </data>
+  <data name="&gt;&gt;btnMemoryRead.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMemoryRead.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnMemoryRead.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnMemorySet.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnMemorySet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 69</value>
+  </data>
+  <data name="btnMemorySet.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnMemorySet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnMemorySet.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnMemorySet.Text" xml:space="preserve">
+    <value>MS</value>
+  </data>
+  <data name="&gt;&gt;btnMemorySet.Name" xml:space="preserve">
+    <value>btnMemorySet</value>
+  </data>
+  <data name="&gt;&gt;btnMemorySet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMemorySet.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnMemorySet.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnEquals.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnEquals.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 103</value>
+  </data>
+  <data name="btnEquals.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnEquals.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 30</value>
+  </data>
+  <data name="btnEquals.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnEquals.Text" xml:space="preserve">
+    <value>=</value>
+  </data>
+  <data name="&gt;&gt;btnEquals.Name" xml:space="preserve">
+    <value>btnEquals</value>
+  </data>
+  <data name="&gt;&gt;btnEquals.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEquals.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnEquals.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnDigitThree.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitThree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 69</value>
+  </data>
+  <data name="btnDigitThree.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitThree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitThree.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitThree.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnDigitThree.Name" xml:space="preserve">
+    <value>btnDigitThree</value>
+  </data>
+  <data name="&gt;&gt;btnDigitThree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitThree.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitThree.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btnAdd.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 103</value>
+  </data>
+  <data name="btnAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnAdd.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
+    <value>btnAdd</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btnDecimal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDecimal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="btnDecimal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 103</value>
+  </data>
+  <data name="btnDecimal.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDecimal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDecimal.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDecimal.Text" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="&gt;&gt;btnDecimal.Name" xml:space="preserve">
+    <value>btnDecimal</value>
+  </data>
+  <data name="&gt;&gt;btnDecimal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDecimal.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDecimal.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="btnDigitD.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 137</value>
+  </data>
+  <data name="btnDigitD.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitD.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitD.Text" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="&gt;&gt;btnDigitD.Name" xml:space="preserve">
+    <value>btnDigitD</value>
+  </data>
+  <data name="&gt;&gt;btnDigitD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitD.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitD.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="btnDigitC.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 137</value>
+  </data>
+  <data name="btnDigitC.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitC.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitC.Text" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="&gt;&gt;btnDigitC.Name" xml:space="preserve">
+    <value>btnDigitC</value>
+  </data>
+  <data name="&gt;&gt;btnDigitC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitC.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitC.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="btnDigitZero.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitZero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 103</value>
+  </data>
+  <data name="btnDigitZero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitZero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitZero.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitZero.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnDigitZero.Name" xml:space="preserve">
+    <value>btnDigitZero</value>
+  </data>
+  <data name="&gt;&gt;btnDigitZero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitZero.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitZero.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="btnUnaryMinus.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnUnaryMinus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 103</value>
+  </data>
+  <data name="btnUnaryMinus.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnUnaryMinus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnUnaryMinus.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnUnaryMinus.Text" xml:space="preserve">
+    <value>+/-</value>
+  </data>
+  <data name="&gt;&gt;btnUnaryMinus.Name" xml:space="preserve">
+    <value>btnUnaryMinus</value>
+  </data>
+  <data name="&gt;&gt;btnUnaryMinus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnUnaryMinus.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnUnaryMinus.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="btnDigitB.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 137</value>
+  </data>
+  <data name="btnDigitB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitB.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitB.Text" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="&gt;&gt;btnDigitB.Name" xml:space="preserve">
+    <value>btnDigitB</value>
+  </data>
+  <data name="&gt;&gt;btnDigitB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitB.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitB.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="btnDigitA.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 137</value>
+  </data>
+  <data name="btnDigitA.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitA.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitA.Text" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="&gt;&gt;btnDigitA.Name" xml:space="preserve">
+    <value>btnDigitA</value>
+  </data>
+  <data name="&gt;&gt;btnDigitA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitA.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitA.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="btnDigitE.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 137</value>
+  </data>
+  <data name="btnDigitE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 30</value>
+  </data>
+  <data name="btnDigitE.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitE.Text" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="&gt;&gt;btnDigitE.Name" xml:space="preserve">
+    <value>btnDigitE</value>
+  </data>
+  <data name="&gt;&gt;btnDigitE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitE.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitE.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="btnDigitF.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnDigitF.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 137</value>
+  </data>
+  <data name="btnDigitF.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitF.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitF.Text" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="&gt;&gt;btnDigitF.Name" xml:space="preserve">
+    <value>btnDigitF</value>
+  </data>
+  <data name="&gt;&gt;btnDigitF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitF.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitF.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="btnMemoryPlus.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnMemoryPlus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 103</value>
+  </data>
+  <data name="btnMemoryPlus.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnMemoryPlus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnMemoryPlus.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnMemoryPlus.Text" xml:space="preserve">
+    <value>M+</value>
+  </data>
+  <data name="&gt;&gt;btnMemoryPlus.Name" xml:space="preserve">
+    <value>btnMemoryPlus</value>
+  </data>
+  <data name="&gt;&gt;btnMemoryPlus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMemoryPlus.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnMemoryPlus.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="btnPi.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnPi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 35</value>
+  </data>
+  <data name="btnPi.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnPi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 30</value>
+  </data>
+  <data name="btnPi.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnPi.Text" xml:space="preserve">
+    <value>Pi</value>
+  </data>
+  <data name="&gt;&gt;btnPi.Name" xml:space="preserve">
+    <value>btnPi</value>
+  </data>
+  <data name="&gt;&gt;btnPi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPi.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnPi.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="btnMultiply.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnMultiply.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 35</value>
+  </data>
+  <data name="btnMultiply.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnMultiply.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnMultiply.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnMultiply.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;btnMultiply.Name" xml:space="preserve">
+    <value>btnMultiply</value>
+  </data>
+  <data name="&gt;&gt;btnMultiply.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMultiply.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnMultiply.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="btnSubtract.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnSubtract.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="btnSubtract.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 69</value>
+  </data>
+  <data name="btnSubtract.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnSubtract.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnSubtract.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnSubtract.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;btnSubtract.Name" xml:space="preserve">
+    <value>btnSubtract</value>
+  </data>
+  <data name="&gt;&gt;btnSubtract.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSubtract.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnSubtract.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="btnMemoryMinus.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnMemoryMinus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 1</value>
+  </data>
+  <data name="btnMemoryMinus.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnMemoryMinus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnMemoryMinus.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnMemoryMinus.Text" xml:space="preserve">
+    <value>M-</value>
+  </data>
+  <data name="&gt;&gt;btnMemoryMinus.Name" xml:space="preserve">
+    <value>btnMemoryMinus</value>
+  </data>
+  <data name="&gt;&gt;btnMemoryMinus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMemoryMinus.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnMemoryMinus.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="btnRandom.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnRandom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 1</value>
+  </data>
+  <data name="btnRandom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnRandom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 30</value>
+  </data>
+  <data name="btnRandom.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnRandom.Text" xml:space="preserve">
+    <value>Ran#</value>
+  </data>
+  <data name="&gt;&gt;btnRandom.Name" xml:space="preserve">
+    <value>btnRandom</value>
+  </data>
+  <data name="&gt;&gt;btnRandom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRandom.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnRandom.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="btnDivide.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDivide.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 1</value>
+  </data>
+  <data name="btnDivide.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDivide.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDivide.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDivide.Text" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="&gt;&gt;btnDivide.Name" xml:space="preserve">
+    <value>btnDivide</value>
+  </data>
+  <data name="&gt;&gt;btnDivide.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDivide.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDivide.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="btnModulus.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnModulus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 69</value>
+  </data>
+  <data name="btnModulus.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnModulus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 30</value>
+  </data>
+  <data name="btnModulus.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnModulus.Text" xml:space="preserve">
+    <value>Mod</value>
+  </data>
+  <data name="&gt;&gt;btnModulus.Name" xml:space="preserve">
+    <value>btnModulus</value>
+  </data>
+  <data name="&gt;&gt;btnModulus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnModulus.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnModulus.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="btnDigitSeven.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDigitSeven.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="btnDigitSeven.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="btnDigitSeven.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnDigitSeven.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDigitSeven.Text" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btnDigitSeven.Name" xml:space="preserve">
+    <value>btnDigitSeven</value>
+  </data>
+  <data name="&gt;&gt;btnDigitSeven.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDigitSeven.Parent" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;btnDigitSeven.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="tlpRight.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="tlpRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 0</value>
+  </data>
+  <data name="tlpRight.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="tlpRight.RowCount" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tlpRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 174</value>
+  </data>
+  <data name="tlpRight.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tlpRight.Name" xml:space="preserve">
+    <value>tlpRight</value>
+  </data>
+  <data name="&gt;&gt;tlpRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpRight.Parent" xml:space="preserve">
+    <value>tlpButtons</value>
+  </data>
+  <data name="&gt;&gt;tlpRight.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlpRight.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnDigitEight" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitFour" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitFive" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitNine" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitSix" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitOne" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitTwo" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnMemoryRead" Row="1" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="btnMemorySet" Row="2" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="btnEquals" Row="3" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitThree" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btnAdd" Row="3" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnDecimal" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitD" Row="4" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitC" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitZero" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnUnaryMinus" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitB" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitA" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitE" Row="4" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitF" Row="4" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="btnMemoryPlus" Row="3" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="btnPi" Row="1" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="btnMultiply" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnSubtract" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnMemoryMinus" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="btnRandom" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="btnDivide" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnModulus" Row="2" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="btnDigitSeven" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,17,Percent,17,Percent,17,Percent,17,Percent,16,Percent,16" /&gt;&lt;Rows Styles="Percent,20,Percent,20,Percent,20,Percent,20,Percent,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="textBoxDisplay.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="textBoxDisplay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 9</value>
+  </data>
+  <data name="textBoxDisplay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 1</value>
+  </data>
+  <data name="textBoxDisplay.MaxLength" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="textBoxDisplay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>401, 20</value>
+  </data>
+  <data name="textBoxDisplay.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="textBoxDisplay.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBoxDisplay.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;textBoxDisplay.Name" xml:space="preserve">
+    <value>textBoxDisplay</value>
+  </data>
+  <data name="&gt;&gt;textBoxDisplay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxDisplay.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxDisplay.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnClearOperand.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnClearOperand.Location" type="System.Drawing.Point, System.Drawing">
+    <value>336, 74</value>
+  </data>
+  <data name="btnClearOperand.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 3, 1, 3</value>
+  </data>
+  <data name="btnClearOperand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnClearOperand.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnClearOperand.Text" xml:space="preserve">
+    <value>CE</value>
+  </data>
+  <data name="&gt;&gt;btnClearOperand.Name" xml:space="preserve">
+    <value>btnClearOperand</value>
+  </data>
+  <data name="&gt;&gt;btnClearOperand.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnClearOperand.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnClearOperand.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnBackSpace.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnBackSpace.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 74</value>
+  </data>
+  <data name="btnBackSpace.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 1, 1</value>
+  </data>
+  <data name="btnBackSpace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="btnBackSpace.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnBackSpace.Text" xml:space="preserve">
+    <value>&lt;--</value>
+  </data>
+  <data name="&gt;&gt;btnBackSpace.Name" xml:space="preserve">
+    <value>btnBackSpace</value>
+  </data>
+  <data name="&gt;&gt;btnBackSpace.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBackSpace.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnBackSpace.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnCancel.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>373, 74</value>
+  </data>
+  <data name="btnCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 1, 3, 1</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tlpModifiers.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <metadata name="cbInverse.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="cbInverse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 5</value>
+  </data>
+  <data name="cbInverse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 5, 5, 2</value>
+  </data>
+  <data name="cbInverse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 18</value>
+  </data>
+  <data name="cbInverse.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbInverse.Text" xml:space="preserve">
+    <value>Inv</value>
+  </data>
+  <data name="&gt;&gt;cbInverse.Name" xml:space="preserve">
+    <value>cbInverse</value>
+  </data>
+  <data name="&gt;&gt;cbInverse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbInverse.Parent" xml:space="preserve">
+    <value>tlpModifiers</value>
+  </data>
+  <data name="&gt;&gt;cbInverse.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbHyperbolic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 5</value>
+  </data>
+  <data name="cbHyperbolic.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 5, 5, 2</value>
+  </data>
+  <data name="cbHyperbolic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 18</value>
+  </data>
+  <data name="cbHyperbolic.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbHyperbolic.Text" xml:space="preserve">
+    <value>Hyp</value>
+  </data>
+  <data name="&gt;&gt;cbHyperbolic.Name" xml:space="preserve">
+    <value>cbHyperbolic</value>
+  </data>
+  <data name="&gt;&gt;cbHyperbolic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbHyperbolic.Parent" xml:space="preserve">
+    <value>tlpModifiers</value>
+  </data>
+  <data name="&gt;&gt;cbHyperbolic.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlpModifiers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 8</value>
+  </data>
+  <data name="tlpModifiers.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tlpModifiers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 26</value>
+  </data>
+  <data name="tlpModifiers.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tlpModifiers.Name" xml:space="preserve">
+    <value>tlpModifiers</value>
+  </data>
+  <data name="&gt;&gt;tlpModifiers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpModifiers.Parent" xml:space="preserve">
+    <value>gbModifiers</value>
+  </data>
+  <data name="&gt;&gt;tlpModifiers.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpModifiers.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="cbInverse" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="cbHyperbolic" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="gbModifiers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 68</value>
+  </data>
+  <data name="gbModifiers.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="gbModifiers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 37</value>
+  </data>
+  <data name="gbModifiers.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;gbModifiers.Name" xml:space="preserve">
+    <value>gbModifiers</value>
+  </data>
+  <data name="&gt;&gt;gbModifiers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbModifiers.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbModifiers.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gbBases.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tlpBases.ColumnCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="rbBinary.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="rbBinary.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbBinary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 5</value>
+  </data>
+  <data name="rbBinary.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 5, 1, 1</value>
+  </data>
+  <data name="rbBinary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 17</value>
+  </data>
+  <data name="rbBinary.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rbBinary.Text" xml:space="preserve">
+    <value>Bin</value>
+  </data>
+  <data name="&gt;&gt;rbBinary.Name" xml:space="preserve">
+    <value>rbBinary</value>
+  </data>
+  <data name="&gt;&gt;rbBinary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbBinary.Parent" xml:space="preserve">
+    <value>tlpBases</value>
+  </data>
+  <data name="&gt;&gt;rbBinary.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rbDecimal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="rbDecimal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbDecimal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 5</value>
+  </data>
+  <data name="rbDecimal.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 5, 1, 1</value>
+  </data>
+  <data name="rbDecimal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 17</value>
+  </data>
+  <data name="rbDecimal.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rbDecimal.Text" xml:space="preserve">
+    <value>Dec</value>
+  </data>
+  <data name="&gt;&gt;rbDecimal.Name" xml:space="preserve">
+    <value>rbDecimal</value>
+  </data>
+  <data name="&gt;&gt;rbDecimal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbDecimal.Parent" xml:space="preserve">
+    <value>tlpBases</value>
+  </data>
+  <data name="&gt;&gt;rbDecimal.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="rbHex.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="rbHex.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbHex.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 5</value>
+  </data>
+  <data name="rbHex.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 5, 1, 1</value>
+  </data>
+  <data name="rbHex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 17</value>
+  </data>
+  <data name="rbHex.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rbHex.Text" xml:space="preserve">
+    <value>Hex</value>
+  </data>
+  <data name="&gt;&gt;rbHex.Name" xml:space="preserve">
+    <value>rbHex</value>
+  </data>
+  <data name="&gt;&gt;rbHex.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbHex.Parent" xml:space="preserve">
+    <value>tlpBases</value>
+  </data>
+  <data name="&gt;&gt;rbHex.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="rbOctal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="rbOctal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbOctal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 5</value>
+  </data>
+  <data name="rbOctal.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 5, 1, 1</value>
+  </data>
+  <data name="rbOctal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 17</value>
+  </data>
+  <data name="rbOctal.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rbOctal.Text" xml:space="preserve">
+    <value>Oct</value>
+  </data>
+  <data name="&gt;&gt;rbOctal.Name" xml:space="preserve">
+    <value>rbOctal</value>
+  </data>
+  <data name="&gt;&gt;rbOctal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbOctal.Parent" xml:space="preserve">
+    <value>tlpBases</value>
+  </data>
+  <data name="&gt;&gt;rbOctal.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tlpBases.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 8</value>
+  </data>
+  <data name="tlpBases.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tlpBases.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 25</value>
+  </data>
+  <data name="tlpBases.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tlpBases.Name" xml:space="preserve">
+    <value>tlpBases</value>
+  </data>
+  <data name="&gt;&gt;tlpBases.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpBases.Parent" xml:space="preserve">
+    <value>gbBases</value>
+  </data>
+  <data name="&gt;&gt;tlpBases.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpBases.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="rbBinary" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="rbDecimal" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="rbHex" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="rbOctal" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;Rows Styles="Absolute,50,Absolute,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="gbBases.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gbBases.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="gbBases.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 3, 3, 3</value>
+  </data>
+  <data name="gbBases.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 36</value>
+  </data>
+  <data name="gbBases.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;gbBases.Name" xml:space="preserve">
+    <value>gbBases</value>
+  </data>
+  <data name="&gt;&gt;gbBases.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbBases.Parent" xml:space="preserve">
+    <value>tlpBasesAndAngles</value>
+  </data>
+  <data name="&gt;&gt;gbBases.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbAngles.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tlpAngles.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="rbDegrees.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="rbDegrees.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbDegrees.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 5</value>
+  </data>
+  <data name="rbDegrees.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 5, 1, 1</value>
+  </data>
+  <data name="rbDegrees.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 17</value>
+  </data>
+  <data name="rbDegrees.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rbDegrees.Text" xml:space="preserve">
+    <value>Degrees</value>
+  </data>
+  <data name="&gt;&gt;rbDegrees.Name" xml:space="preserve">
+    <value>rbDegrees</value>
+  </data>
+  <data name="&gt;&gt;rbDegrees.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbDegrees.Parent" xml:space="preserve">
+    <value>tlpAngles</value>
+  </data>
+  <data name="&gt;&gt;rbDegrees.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rbGradients.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="rbGradients.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbGradients.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 5</value>
+  </data>
+  <data name="rbGradients.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 5, 1, 1</value>
+  </data>
+  <data name="rbGradients.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 17</value>
+  </data>
+  <data name="rbGradients.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rbGradients.Text" xml:space="preserve">
+    <value>Grads</value>
+  </data>
+  <data name="&gt;&gt;rbGradients.Name" xml:space="preserve">
+    <value>rbGradients</value>
+  </data>
+  <data name="&gt;&gt;rbGradients.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbGradients.Parent" xml:space="preserve">
+    <value>tlpAngles</value>
+  </data>
+  <data name="&gt;&gt;rbGradients.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="rbRadians.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="rbRadians.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbRadians.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 5</value>
+  </data>
+  <data name="rbRadians.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 5, 1, 1</value>
+  </data>
+  <data name="rbRadians.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 17</value>
+  </data>
+  <data name="rbRadians.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rbRadians.Text" xml:space="preserve">
+    <value>Radians</value>
+  </data>
+  <data name="&gt;&gt;rbRadians.Name" xml:space="preserve">
+    <value>rbRadians</value>
+  </data>
+  <data name="&gt;&gt;rbRadians.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbRadians.Parent" xml:space="preserve">
+    <value>tlpAngles</value>
+  </data>
+  <data name="&gt;&gt;rbRadians.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tlpAngles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 8</value>
+  </data>
+  <data name="tlpAngles.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tlpAngles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 25</value>
+  </data>
+  <data name="tlpAngles.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;tlpAngles.Name" xml:space="preserve">
+    <value>tlpAngles</value>
+  </data>
+  <data name="&gt;&gt;tlpAngles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpAngles.Parent" xml:space="preserve">
+    <value>gbAngles</value>
+  </data>
+  <data name="&gt;&gt;tlpAngles.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpAngles.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="rbDegrees" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="rbGradients" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="rbRadians" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33,Percent,33,Percent,34" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="gbAngles.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gbAngles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 3</value>
+  </data>
+  <data name="gbAngles.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 0, 3</value>
+  </data>
+  <data name="gbAngles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 36</value>
+  </data>
+  <data name="gbAngles.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;gbAngles.Name" xml:space="preserve">
+    <value>gbAngles</value>
+  </data>
+  <data name="&gt;&gt;gbAngles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbAngles.Parent" xml:space="preserve">
+    <value>tlpBasesAndAngles</value>
+  </data>
+  <data name="&gt;&gt;gbAngles.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnEatFocus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 76</value>
+  </data>
+  <data name="btnEatFocus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnEatFocus.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;btnEatFocus.Name" xml:space="preserve">
+    <value>btnEatFocus</value>
+  </data>
+  <data name="&gt;&gt;btnEatFocus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEatFocus.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnEatFocus.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tlpBasesAndAngles.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tlpBasesAndAngles.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tlpBasesAndAngles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 29</value>
+  </data>
+  <data name="tlpBasesAndAngles.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tlpBasesAndAngles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>401, 42</value>
+  </data>
+  <data name="tlpBasesAndAngles.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tlpBasesAndAngles.Name" xml:space="preserve">
+    <value>tlpBasesAndAngles</value>
+  </data>
+  <data name="&gt;&gt;tlpBasesAndAngles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpBasesAndAngles.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tlpBasesAndAngles.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlpBasesAndAngles.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="gbBases" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gbAngles" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="tlpButtons.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tlpButtons.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="tlpButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 113</value>
+  </data>
+  <data name="tlpButtons.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tlpButtons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>401, 174</value>
+  </data>
+  <data name="tlpButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tlpButtons.Name" xml:space="preserve">
+    <value>tlpButtons</value>
+  </data>
+  <data name="&gt;&gt;tlpButtons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpButtons.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tlpButtons.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpButtons.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tlpLeft" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tlpRight" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,40,Percent,60" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>419, 296</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
+        AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmREREREREREREREREREQAbm
+        ZmZmZmZmZmZmZmZmZkAG9mAAYABgAGAAYAAAAGZABuZvcG9wb3BvcG93d3BmQAb2b/Bv8G/wb/Bv///w
+        ZkAG5mZmZmZmZmZmZmZmZmZABvZgAGAAYABgAGAAYABmQAbmb3BvcG9wb3BvcG9wZkAG9m/wb/Bv8G/w
+        b/Bv8GZABuZmZmZmZmZmZmZmZmZmQAb2YABgAGAAYABgAGAAZkAG5m9wb3BvcG9wb3BvcGZABvZv8G/w
+        b/Bv8G/wb/BmQAbmZmZmZmZmZmZmZmZmZkAG9mB3d3d3d3d3ZmZmZmZABuZg////////92ZmZmZmQAb2
+        YHd3d3d3d3dmZmZmZkAG5mAAAAAAAAAAZmZmZmZABv7+/v7+/v7+/v7+/v7+QABmZmZmZmZmZmZmZmZm
+        ZmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////8AA
+        AAGAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAA
+        AACAAAAAgAAAAIAAAACAAAAAwAAAAf///////////////////////////////w==
+</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>425, 325</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>425, 325</value>
+  </data>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>9, 9, 9, 9</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>J# Calculator</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CalculatorForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

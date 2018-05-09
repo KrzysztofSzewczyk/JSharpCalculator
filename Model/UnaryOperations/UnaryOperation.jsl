@@ -1,0 +1,23 @@
+package calculator.model.unaryOperations;
+
+import calculator.model.*;
+
+/**
+ * Base class for all unary operations like sine, log etc.
+ */
+abstract public class UnaryOperation implements Operation
+{
+	public void operate(OperandStack ops)
+	{
+		double unOp = ops.pop();
+		ops.push(operateUnary(unOp));
+	}
+
+	public OperationType getType()
+	{
+		return OperationType.Unary;
+	}
+
+	// abstract method for all the unary operations
+	abstract public double operateUnary(double unOp);
+}

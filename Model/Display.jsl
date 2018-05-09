@@ -1,0 +1,148 @@
+package calculator.model;
+
+import calculator.model.mode.*;
+import java.util.Observable;
+
+/**
+ * The Display class keeps in sync with the textBox for display in
+ * CalculatorForm. This is managed by making Display a Observable class and
+ * CalculatorForm a Observer class. Anytime the buffer is changed by
+ * the caller, after done with it, the caller should call doNotify().
+ */
+public class Display extends Observable
+{
+	/**
+	 * Clear the display
+	 */
+	public void clear()
+	{
+		canChange = true;
+		buffer.setLength(0);
+		buffer.append(Base.ZERO_DIGIT);
+		doNotify();
+	}
+
+	/**
+	 * Set the string as display
+	 */
+	public void setDisplay(String s)
+	{
+		canChange = false;
+		buffer.setLength(0);
+		buffer.append(s);
+		doNotify();
+	}
+
+	/**
+	 * Append a character.
+	 */
+	public boolean appendChar(char ch)
+	{
+		if (!canChange)
+		{
+			return false;
+		}
+
+		if (ch != Base.DECIMAL_SEPARATOR && isZero())
+		{
+			// Clear off the 0 to avoid buffer being 00 or 01.
+			// For decimal, it should still be "0.".
+			buffer.setLength(0);
+		}
+
+		buffer.append(ch);
+		doNotify();
+		return true;
+	}
+
+	/**
+	 * Remove last char from buffer
+	 */
+	public boolean removeChar()
+	{
+		if (!canChange)
+		{
+			return false;
+		}
+
+		buffer.setLength(buffer.length() - 1);
+
+		if (buffer.length() == 0)
+		{
+			// If this was the only char, put back 0
+			buffer.append(Base.ZERO_DIGIT);
+		}
+		else if (buffer.length() == 1 && buffer.charAt(0) == Base.MINUS_SIGN)
+		{
+			// If only -, make buffer as 0.
+			buffer.setCharAt(0, Base.ZERO_DIGIT);
+		}
+
+		doNotify();
+		return true;
+	}
+
+	/**
+	 * Toggle unary minus sign
+	 */
+	public boolean toggleMinus()
+	{
+		if (buffer.charAt(0) == Base.MINUS_SIGN)
+		{
+			// - was there. Remove it
+			buffer.deleteCharAt(0);
+		}
+		else if (!isZero())
+		{
+			// If number is not 0, add - at start.
+			buffer.insert(0, Base.MINUS_SIGN);
+		}
+
+		doNotify();
+		return true;
+	}
+
+	/**
+	 * Returns the display string.
+	 */
+	public String toString()
+	{
+		return buffer.toString();
+	}
+
+	/**
+	 * Whether the display can change or not?
+	 */
+	public boolean canChange()
+	{
+		return canChange;
+	}
+
+	/**
+	 * Fires notification to all observers about the change.
+	 */
+	private void doNotify()
+	{
+		setChanged();
+		notifyObservers(buffer.toString());
+	}
+
+	/**
+	 * Is display 0?
+	 */
+	private boolean isZero()
+	{
+		// Display is 0 if there is one char and that is 0
+		return (buffer.length() == 1 && buffer.charAt(0) == Base.ZERO_DIGIT);
+	}
+
+	/**
+	 * Stores the current display in the calculator
+	 */
+	private StringBuffer buffer = new StringBuffer();
+
+	/**
+	 * Whether the current display can change
+	 */
+	private boolean canChange;
+}

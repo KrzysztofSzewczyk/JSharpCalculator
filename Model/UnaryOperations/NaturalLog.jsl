@@ -1,0 +1,11 @@
+package calculator.model.unaryOperations;
+
+import calculator.model.*;
+
+public class NaturalLog extends UnaryOperation
+{
+	public double operateUnary(double operand)
+	{
+		return Math.log(operand);
+	}
+}

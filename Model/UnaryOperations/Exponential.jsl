@@ -1,0 +1,11 @@
+package calculator.model.unaryOperations;
+
+import calculator.model.*;
+
+public class Exponential extends UnaryOperation
+{
+	public double operateUnary(double operand)
+	{
+		return Math.exp(operand);
+	}
+}

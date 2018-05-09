@@ -1,0 +1,1180 @@
+package calculator.ui;
+
+import calculator.*;
+import calculator.model.*;
+import calculator.model.binaryOperations.*;
+import calculator.model.unaryOperations.*;
+import calculator.model.zeroaryOperations.*;
+import calculator.model.memoryOperations.*;
+import calculator.model.mode.*;
+
+import java.util.*;
+import System.Drawing.*;
+import System.Collections.*;
+import System.ComponentModel.*;
+import System.Windows.Forms.*;
+
+
+/**
+ * Defines the Calculator UI including layout, buttons for operations
+ * and digits. There are 5 unused buttons on the first panel which can be
+ * used for extensions. In addition there are other UI controls that are
+ * not implemented and left for extension purpose.
+*/
+public class CalculatorForm extends System.Windows.Forms.Form
+	implements Observer
+{
+	/**
+	 * A HashMap to map the button to a digit or an operation. This is used
+	 * by the event handler function to take appropriate action.
+	 */
+	private HashMap mapButtonToAction;
+
+	/**
+	 * Array for all digit buttons
+	 */
+	private Button[] btnHexDigits;
+
+	#region Windows Form Designer generated code
+	/**
+     * Required designer variable.
+     */
+	private System.ComponentModel.IContainer components;
+
+	private TableLayoutPanel tlpLeft;
+	private Button btnEmpty1;
+	private Button btnEmpty2;
+	private Button btnEmpty3;
+	private Button btnEmpty4;
+	private Button btnEmpty5;
+	private Button btnCombination;
+	private Button btnPermutation;
+	private Button btnSine;
+	private Button btnCosine;
+	private Button btnTangent;
+	private Button btnOneByX;
+	private Button btnSquareRoot;
+	private Button btnPower;
+	private Button btnCube;
+	private Button btnSquare;
+	private Button btnFeMode;
+	private Button btnFactorial;
+	private Button btnLog;
+	private Button btnNaturalLog;
+	private Button btnExponential;
+	private TableLayoutPanel tlpRight;
+	private Button btnDigitZero;
+	private Button btnDigitOne;
+	private Button btnDigitTwo;
+	private Button btnDigitThree;
+	private Button btnDigitFour;
+	private Button btnDigitFive;
+	private Button btnDigitSix;
+	private Button btnDigitSeven;
+	private Button btnDigitEight;
+	private Button btnDigitNine;
+	private Button btnDigitA;
+	private Button btnDigitB;
+	private Button btnDigitC;
+	private Button btnDigitD;
+	private Button btnDigitE;
+	private Button btnDigitF;
+	private Button btnUnaryMinus;
+	private Button btnDecimal;
+	private Button btnAdd;
+	private Button btnSubtract;
+	private Button btnMultiply;
+	private Button btnDivide;
+	private Button btnRandom;
+	private Button btnPi;
+	private Button btnModulus;
+	private Button btnEquals;
+	private Button btnMemorySet;
+	private Button btnMemoryRead;
+	private Button btnMemoryPlus;
+	private Button btnMemoryMinus;
+	private Button btnBackSpace;
+	private Button btnClearOperand;
+	private Button btnCancel;
+	private TableLayoutPanel tlpModifiers;
+	private GroupBox gbModifiers;
+	private CheckBox cbInverse;
+	private CheckBox cbHyperbolic;
+	private TableLayoutPanel tlpBases;
+	private GroupBox gbBases;
+	private RadioButton rbHex;
+	private RadioButton rbDecimal;
+	private RadioButton rbOctal;
+	private RadioButton rbBinary;
+	private TableLayoutPanel tlpAngles;
+	private GroupBox gbAngles;
+	private RadioButton rbDegrees;
+	private RadioButton rbRadians;
+	private RadioButton rbGradients;
+	private Button btnEatFocus;
+	private TableLayoutPanel tlpBasesAndAngles;
+	private TableLayoutPanel tlpButtons;
+	private TextBox textBoxDisplay;
+	#endregion
+
+	public CalculatorForm()
+	{
+		/*
+		 * Required by Windows Form Designer
+		 */
+		InitializeComponent();
+
+		// Disable the buttons which are meant as extensions.
+		disableExtendedComponents();
+
+		// Initialize the map of buttons to operations.
+		initializeMap();
+
+		// set initial base value
+		setBase(Engine.getMode().getBase());
+	}
+
+	/**
+	 * Update the display.
+	 */
+	public void update(Observable observable, Object object)
+	{
+		// this is the function which is called when display text is changed.
+		// Refresh the text in textbox.
+		textBoxDisplay.set_Text(object.toString());
+
+		// Also check the engine error state and act accordingly
+		boolean state = Engine.getErrorState();
+		rbDecimal.set_AutoCheck(!state);
+		rbBinary.set_AutoCheck(!state);
+		rbDegrees.set_AutoCheck(!state);
+	}
+
+	#region Windows Form Designer generated code
+	/**
+     * Clean up any resources being used.
+     */
+	protected void Dispose(boolean disposing)
+	{
+		if (disposing)
+		{
+			if (components != null)
+			{
+				components.Dispose();
+			}
+		}
+		super.Dispose(disposing);
+	}
+
+	/**
+	 * Required method for Designer support - do not modify
+	 * the contents of this method with the code editor.
+	 */
+	private void InitializeComponent()
+	{
+		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(CalculatorForm.class.ToType());
+		this.tlpLeft = new System.Windows.Forms.TableLayoutPanel();
+		this.btnEmpty1 = new System.Windows.Forms.Button();
+		this.btnCombination = new System.Windows.Forms.Button();
+		this.btnEmpty2 = new System.Windows.Forms.Button();
+		this.btnPermutation = new System.Windows.Forms.Button();
+		this.btnOneByX = new System.Windows.Forms.Button();
+		this.btnFeMode = new System.Windows.Forms.Button();
+		this.btnSquareRoot = new System.Windows.Forms.Button();
+		this.btnFactorial = new System.Windows.Forms.Button();
+		this.btnEmpty3 = new System.Windows.Forms.Button();
+		this.btnSine = new System.Windows.Forms.Button();
+		this.btnPower = new System.Windows.Forms.Button();
+		this.btnLog = new System.Windows.Forms.Button();
+		this.btnNaturalLog = new System.Windows.Forms.Button();
+		this.btnCube = new System.Windows.Forms.Button();
+		this.btnExponential = new System.Windows.Forms.Button();
+		this.btnSquare = new System.Windows.Forms.Button();
+		this.btnEmpty4 = new System.Windows.Forms.Button();
+		this.btnCosine = new System.Windows.Forms.Button();
+		this.btnTangent = new System.Windows.Forms.Button();
+		this.btnEmpty5 = new System.Windows.Forms.Button();
+		this.tlpRight = new System.Windows.Forms.TableLayoutPanel();
+		this.btnDigitEight = new System.Windows.Forms.Button();
+		this.btnDigitFour = new System.Windows.Forms.Button();
+		this.btnDigitFive = new System.Windows.Forms.Button();
+		this.btnDigitNine = new System.Windows.Forms.Button();
+		this.btnDigitSix = new System.Windows.Forms.Button();
+		this.btnDigitOne = new System.Windows.Forms.Button();
+		this.btnDigitTwo = new System.Windows.Forms.Button();
+		this.btnMemoryRead = new System.Windows.Forms.Button();
+		this.btnMemorySet = new System.Windows.Forms.Button();
+		this.btnEquals = new System.Windows.Forms.Button();
+		this.btnDigitThree = new System.Windows.Forms.Button();
+		this.btnAdd = new System.Windows.Forms.Button();
+		this.btnDecimal = new System.Windows.Forms.Button();
+		this.btnDigitD = new System.Windows.Forms.Button();
+		this.btnDigitC = new System.Windows.Forms.Button();
+		this.btnDigitZero = new System.Windows.Forms.Button();
+		this.btnUnaryMinus = new System.Windows.Forms.Button();
+		this.btnDigitB = new System.Windows.Forms.Button();
+		this.btnDigitA = new System.Windows.Forms.Button();
+		this.btnDigitE = new System.Windows.Forms.Button();
+		this.btnDigitF = new System.Windows.Forms.Button();
+		this.btnMemoryPlus = new System.Windows.Forms.Button();
+		this.btnPi = new System.Windows.Forms.Button();
+		this.btnMultiply = new System.Windows.Forms.Button();
+		this.btnSubtract = new System.Windows.Forms.Button();
+		this.btnMemoryMinus = new System.Windows.Forms.Button();
+		this.btnRandom = new System.Windows.Forms.Button();
+		this.btnDivide = new System.Windows.Forms.Button();
+		this.btnModulus = new System.Windows.Forms.Button();
+		this.btnDigitSeven = new System.Windows.Forms.Button();
+		this.textBoxDisplay = new System.Windows.Forms.TextBox();
+		this.btnClearOperand = new System.Windows.Forms.Button();
+		this.btnBackSpace = new System.Windows.Forms.Button();
+		this.btnCancel = new System.Windows.Forms.Button();
+		this.gbModifiers = new System.Windows.Forms.GroupBox();
+		this.tlpModifiers = new System.Windows.Forms.TableLayoutPanel();
+		this.cbInverse = new System.Windows.Forms.CheckBox();
+		this.cbHyperbolic = new System.Windows.Forms.CheckBox();
+		this.gbBases = new System.Windows.Forms.GroupBox();
+		this.tlpBases = new System.Windows.Forms.TableLayoutPanel();
+		this.rbBinary = new System.Windows.Forms.RadioButton();
+		this.rbDecimal = new System.Windows.Forms.RadioButton();
+		this.rbHex = new System.Windows.Forms.RadioButton();
+		this.rbOctal = new System.Windows.Forms.RadioButton();
+		this.gbAngles = new System.Windows.Forms.GroupBox();
+		this.tlpAngles = new System.Windows.Forms.TableLayoutPanel();
+		this.rbDegrees = new System.Windows.Forms.RadioButton();
+		this.rbGradients = new System.Windows.Forms.RadioButton();
+		this.rbRadians = new System.Windows.Forms.RadioButton();
+		this.btnEatFocus = new System.Windows.Forms.Button();
+		this.tlpBasesAndAngles = new System.Windows.Forms.TableLayoutPanel();
+		this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
+		this.tlpLeft.SuspendLayout();
+		this.tlpRight.SuspendLayout();
+		this.gbModifiers.SuspendLayout();
+		this.tlpModifiers.SuspendLayout();
+		this.gbBases.SuspendLayout();
+		this.tlpBases.SuspendLayout();
+		this.gbAngles.SuspendLayout();
+		this.tlpAngles.SuspendLayout();
+		this.tlpBasesAndAngles.SuspendLayout();
+		this.tlpButtons.SuspendLayout();
+		this.SuspendLayout();
+		// 
+		// tlpLeft
+		// 
+		resources.ApplyResources(this.tlpLeft, "tlpLeft");
+		this.tlpLeft.get_Controls().Add(this.btnEmpty1, 0, 0);
+		this.tlpLeft.get_Controls().Add(this.btnCombination, 1, 0);
+		this.tlpLeft.get_Controls().Add(this.btnEmpty2, 0, 1);
+		this.tlpLeft.get_Controls().Add(this.btnPermutation, 1, 1);
+		this.tlpLeft.get_Controls().Add(this.btnOneByX, 2, 0);
+		this.tlpLeft.get_Controls().Add(this.btnFeMode, 3, 0);
+		this.tlpLeft.get_Controls().Add(this.btnSquareRoot, 2, 1);
+		this.tlpLeft.get_Controls().Add(this.btnFactorial, 3, 1);
+		this.tlpLeft.get_Controls().Add(this.btnEmpty3, 0, 2);
+		this.tlpLeft.get_Controls().Add(this.btnSine, 1, 2);
+		this.tlpLeft.get_Controls().Add(this.btnPower, 2, 2);
+		this.tlpLeft.get_Controls().Add(this.btnLog, 3, 2);
+		this.tlpLeft.get_Controls().Add(this.btnNaturalLog, 3, 3);
+		this.tlpLeft.get_Controls().Add(this.btnCube, 2, 3);
+		this.tlpLeft.get_Controls().Add(this.btnExponential, 3, 4);
+		this.tlpLeft.get_Controls().Add(this.btnSquare, 2, 4);
+		this.tlpLeft.get_Controls().Add(this.btnEmpty4, 0, 3);
+		this.tlpLeft.get_Controls().Add(this.btnCosine, 1, 3);
+		this.tlpLeft.get_Controls().Add(this.btnTangent, 1, 4);
+		this.tlpLeft.get_Controls().Add(this.btnEmpty5, 0, 4);
+		this.tlpLeft.set_Name("tlpLeft");
+		// 
+		// btnEmpty1
+		// 
+		resources.ApplyResources(this.btnEmpty1, "btnEmpty1");
+		this.btnEmpty1.set_Name("btnEmpty1");
+		this.btnEmpty1.set_TabStop(false);
+		// 
+		// btnCombination
+		// 
+		resources.ApplyResources(this.btnCombination, "btnCombination");
+		this.btnCombination.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnCombination.set_Name("btnCombination");
+		this.btnCombination.set_TabStop(false);
+		this.btnCombination.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnEmpty2
+		// 
+		resources.ApplyResources(this.btnEmpty2, "btnEmpty2");
+		this.btnEmpty2.set_Name("btnEmpty2");
+		this.btnEmpty2.set_TabStop(false);
+		// 
+		// btnPermutation
+		// 
+		resources.ApplyResources(this.btnPermutation, "btnPermutation");
+		this.btnPermutation.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnPermutation.set_Name("btnPermutation");
+		this.btnPermutation.set_TabStop(false);
+		this.btnPermutation.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnOneByX
+		// 
+		resources.ApplyResources(this.btnOneByX, "btnOneByX");
+		this.btnOneByX.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnOneByX.set_Name("btnOneByX");
+		this.btnOneByX.set_TabStop(false);
+		this.btnOneByX.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnFeMode
+		// 
+		resources.ApplyResources(this.btnFeMode, "btnFeMode");
+		this.btnFeMode.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnFeMode.set_Name("btnFeMode");
+		this.btnFeMode.set_TabStop(false);
+		this.btnFeMode.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnSquareRoot
+		// 
+		resources.ApplyResources(this.btnSquareRoot, "btnSquareRoot");
+		this.btnSquareRoot.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnSquareRoot.set_Name("btnSquareRoot");
+		this.btnSquareRoot.set_TabStop(false);
+		this.btnSquareRoot.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnFactorial
+		// 
+		resources.ApplyResources(this.btnFactorial, "btnFactorial");
+		this.btnFactorial.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnFactorial.set_Name("btnFactorial");
+		this.btnFactorial.set_TabStop(false);
+		this.btnFactorial.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnEmpty3
+		// 
+		resources.ApplyResources(this.btnEmpty3, "btnEmpty3");
+		this.btnEmpty3.set_Name("btnEmpty3");
+		this.btnEmpty3.set_TabStop(false);
+		// 
+		// btnSine
+		// 
+		resources.ApplyResources(this.btnSine, "btnSine");
+		this.btnSine.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnSine.set_Name("btnSine");
+		this.btnSine.set_TabStop(false);
+		this.btnSine.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnPower
+		// 
+		resources.ApplyResources(this.btnPower, "btnPower");
+		this.btnPower.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnPower.set_Name("btnPower");
+		this.btnPower.set_TabStop(false);
+		this.btnPower.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnLog
+		// 
+		resources.ApplyResources(this.btnLog, "btnLog");
+		this.btnLog.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnLog.set_Name("btnLog");
+		this.btnLog.set_TabStop(false);
+		this.btnLog.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnNaturalLog
+		// 
+		resources.ApplyResources(this.btnNaturalLog, "btnNaturalLog");
+		this.btnNaturalLog.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnNaturalLog.set_Name("btnNaturalLog");
+		this.btnNaturalLog.set_TabStop(false);
+		this.btnNaturalLog.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnCube
+		// 
+		resources.ApplyResources(this.btnCube, "btnCube");
+		this.btnCube.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnCube.set_Name("btnCube");
+		this.btnCube.set_TabStop(false);
+		this.btnCube.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnExponential
+		// 
+		resources.ApplyResources(this.btnExponential, "btnExponential");
+		this.btnExponential.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnExponential.set_Name("btnExponential");
+		this.btnExponential.set_TabStop(false);
+		this.btnExponential.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnSquare
+		// 
+		resources.ApplyResources(this.btnSquare, "btnSquare");
+		this.btnSquare.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnSquare.set_Name("btnSquare");
+		this.btnSquare.set_TabStop(false);
+		this.btnSquare.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnEmpty4
+		// 
+		resources.ApplyResources(this.btnEmpty4, "btnEmpty4");
+		this.btnEmpty4.set_Name("btnEmpty4");
+		this.btnEmpty4.set_TabStop(false);
+		// 
+		// btnCosine
+		// 
+		resources.ApplyResources(this.btnCosine, "btnCosine");
+		this.btnCosine.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnCosine.set_Name("btnCosine");
+		this.btnCosine.set_TabStop(false);
+		this.btnCosine.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnTangent
+		// 
+		resources.ApplyResources(this.btnTangent, "btnTangent");
+		this.btnTangent.set_ForeColor(System.Drawing.Color.get_Magenta());
+		this.btnTangent.set_Name("btnTangent");
+		this.btnTangent.set_TabStop(false);
+		this.btnTangent.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnEmpty5
+		// 
+		resources.ApplyResources(this.btnEmpty5, "btnEmpty5");
+		this.btnEmpty5.set_Name("btnEmpty5");
+		this.btnEmpty5.set_TabStop(false);
+		// 
+		// tlpRight
+		// 
+		resources.ApplyResources(this.tlpRight, "tlpRight");
+		this.tlpRight.get_Controls().Add(this.btnDigitEight, 1, 0);
+		this.tlpRight.get_Controls().Add(this.btnDigitFour, 0, 1);
+		this.tlpRight.get_Controls().Add(this.btnDigitFive, 1, 1);
+		this.tlpRight.get_Controls().Add(this.btnDigitNine, 2, 0);
+		this.tlpRight.get_Controls().Add(this.btnDigitSix, 2, 1);
+		this.tlpRight.get_Controls().Add(this.btnDigitOne, 0, 2);
+		this.tlpRight.get_Controls().Add(this.btnDigitTwo, 1, 2);
+		this.tlpRight.get_Controls().Add(this.btnMemoryRead, 5, 1);
+		this.tlpRight.get_Controls().Add(this.btnMemorySet, 5, 2);
+		this.tlpRight.get_Controls().Add(this.btnEquals, 4, 3);
+		this.tlpRight.get_Controls().Add(this.btnDigitThree, 2, 2);
+		this.tlpRight.get_Controls().Add(this.btnAdd, 3, 3);
+		this.tlpRight.get_Controls().Add(this.btnDecimal, 2, 3);
+		this.tlpRight.get_Controls().Add(this.btnDigitD, 3, 4);
+		this.tlpRight.get_Controls().Add(this.btnDigitC, 2, 4);
+		this.tlpRight.get_Controls().Add(this.btnDigitZero, 0, 3);
+		this.tlpRight.get_Controls().Add(this.btnUnaryMinus, 1, 3);
+		this.tlpRight.get_Controls().Add(this.btnDigitB, 1, 4);
+		this.tlpRight.get_Controls().Add(this.btnDigitA, 0, 4);
+		this.tlpRight.get_Controls().Add(this.btnDigitE, 4, 4);
+		this.tlpRight.get_Controls().Add(this.btnDigitF, 5, 4);
+		this.tlpRight.get_Controls().Add(this.btnMemoryPlus, 5, 3);
+		this.tlpRight.get_Controls().Add(this.btnPi, 4, 1);
+		this.tlpRight.get_Controls().Add(this.btnMultiply, 3, 1);
+		this.tlpRight.get_Controls().Add(this.btnSubtract, 3, 2);
+		this.tlpRight.get_Controls().Add(this.btnMemoryMinus, 5, 0);
+		this.tlpRight.get_Controls().Add(this.btnRandom, 4, 0);
+		this.tlpRight.get_Controls().Add(this.btnDivide, 3, 0);
+		this.tlpRight.get_Controls().Add(this.btnModulus, 4, 2);
+		this.tlpRight.get_Controls().Add(this.btnDigitSeven, 0, 0);
+		this.tlpRight.set_Name("tlpRight");
+		// 
+		// btnDigitEight
+		// 
+		resources.ApplyResources(this.btnDigitEight, "btnDigitEight");
+		this.btnDigitEight.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitEight.set_Name("btnDigitEight");
+		this.btnDigitEight.set_TabStop(false);
+		this.btnDigitEight.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitFour
+		// 
+		resources.ApplyResources(this.btnDigitFour, "btnDigitFour");
+		this.btnDigitFour.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitFour.set_Name("btnDigitFour");
+		this.btnDigitFour.set_TabStop(false);
+		this.btnDigitFour.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitFive
+		// 
+		resources.ApplyResources(this.btnDigitFive, "btnDigitFive");
+		this.btnDigitFive.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitFive.set_Name("btnDigitFive");
+		this.btnDigitFive.set_TabStop(false);
+		this.btnDigitFive.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitNine
+		// 
+		resources.ApplyResources(this.btnDigitNine, "btnDigitNine");
+		this.btnDigitNine.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitNine.set_Name("btnDigitNine");
+		this.btnDigitNine.set_TabStop(false);
+		this.btnDigitNine.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitSix
+		// 
+		resources.ApplyResources(this.btnDigitSix, "btnDigitSix");
+		this.btnDigitSix.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitSix.set_Name("btnDigitSix");
+		this.btnDigitSix.set_TabStop(false);
+		this.btnDigitSix.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitOne
+		// 
+		resources.ApplyResources(this.btnDigitOne, "btnDigitOne");
+		this.btnDigitOne.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitOne.set_Name("btnDigitOne");
+		this.btnDigitOne.set_TabStop(false);
+		this.btnDigitOne.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitTwo
+		// 
+		resources.ApplyResources(this.btnDigitTwo, "btnDigitTwo");
+		this.btnDigitTwo.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitTwo.set_Name("btnDigitTwo");
+		this.btnDigitTwo.set_TabStop(false);
+		this.btnDigitTwo.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnMemoryRead
+		// 
+		resources.ApplyResources(this.btnMemoryRead, "btnMemoryRead");
+		this.btnMemoryRead.set_ForeColor(System.Drawing.Color.get_Red());
+		this.btnMemoryRead.set_Name("btnMemoryRead");
+		this.btnMemoryRead.set_TabStop(false);
+		this.btnMemoryRead.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnMemorySet
+		// 
+		resources.ApplyResources(this.btnMemorySet, "btnMemorySet");
+		this.btnMemorySet.set_ForeColor(System.Drawing.Color.get_Red());
+		this.btnMemorySet.set_Name("btnMemorySet");
+		this.btnMemorySet.set_TabStop(false);
+		this.btnMemorySet.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnEquals
+		// 
+		resources.ApplyResources(this.btnEquals, "btnEquals");
+		this.btnEquals.set_ForeColor(System.Drawing.Color.get_Red());
+		this.btnEquals.set_Name("btnEquals");
+		this.btnEquals.set_TabStop(false);
+		this.btnEquals.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitThree
+		// 
+		resources.ApplyResources(this.btnDigitThree, "btnDigitThree");
+		this.btnDigitThree.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitThree.set_Name("btnDigitThree");
+		this.btnDigitThree.set_TabStop(false);
+		this.btnDigitThree.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnAdd
+		// 
+		resources.ApplyResources(this.btnAdd, "btnAdd");
+		this.btnAdd.set_ForeColor(System.Drawing.Color.get_Red());
+		this.btnAdd.set_Name("btnAdd");
+		this.btnAdd.set_TabStop(false);
+		this.btnAdd.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDecimal
+		// 
+		resources.ApplyResources(this.btnDecimal, "btnDecimal");
+		this.btnDecimal.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDecimal.set_Name("btnDecimal");
+		this.btnDecimal.set_TabStop(false);
+		this.btnDecimal.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitD
+		// 
+		resources.ApplyResources(this.btnDigitD, "btnDigitD");
+		this.btnDigitD.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitD.set_Name("btnDigitD");
+		this.btnDigitD.set_TabStop(false);
+		this.btnDigitD.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitC
+		// 
+		resources.ApplyResources(this.btnDigitC, "btnDigitC");
+		this.btnDigitC.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitC.set_Name("btnDigitC");
+		this.btnDigitC.set_TabStop(false);
+		this.btnDigitC.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitZero
+		// 
+		resources.ApplyResources(this.btnDigitZero, "btnDigitZero");
+		this.btnDigitZero.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitZero.set_Name("btnDigitZero");
+		this.btnDigitZero.set_TabStop(false);
+		this.btnDigitZero.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnUnaryMinus
+		// 
+		resources.ApplyResources(this.btnUnaryMinus, "btnUnaryMinus");
+		this.btnUnaryMinus.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnUnaryMinus.set_Name("btnUnaryMinus");
+		this.btnUnaryMinus.set_TabStop(false);
+		this.btnUnaryMinus.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitB
+		// 
+		resources.ApplyResources(this.btnDigitB, "btnDigitB");
+		this.btnDigitB.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitB.set_Name("btnDigitB");
+		this.btnDigitB.set_TabStop(false);
+		this.btnDigitB.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitA
+		// 
+		resources.ApplyResources(this.btnDigitA, "btnDigitA");
+		this.btnDigitA.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitA.set_Name("btnDigitA");
+		this.btnDigitA.set_TabStop(false);
+		this.btnDigitA.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitE
+		// 
+		resources.ApplyResources(this.btnDigitE, "btnDigitE");
+		this.btnDigitE.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitE.set_Name("btnDigitE");
+		this.btnDigitE.set_TabStop(false);
+		this.btnDigitE.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitF
+		// 
+		resources.ApplyResources(this.btnDigitF, "btnDigitF");
+		this.btnDigitF.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitF.set_Name("btnDigitF");
+		this.btnDigitF.set_TabStop(false);
+		this.btnDigitF.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnMemoryPlus
+		// 
+		resources.ApplyResources(this.btnMemoryPlus, "btnMemoryPlus");
+		this.btnMemoryPlus.set_ForeColor(System.Drawing.Color.get_Red());
+		this.btnMemoryPlus.set_Name("btnMemoryPlus");
+		this.btnMemoryPlus.set_TabStop(false);
+		this.btnMemoryPlus.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnPi
+		// 
+		resources.ApplyResources(this.btnPi, "btnPi");
+		this.btnPi.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnPi.set_Name("btnPi");
+		this.btnPi.set_TabStop(false);
+		this.btnPi.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnMultiply
+		// 
+		resources.ApplyResources(this.btnMultiply, "btnMultiply");
+		this.btnMultiply.set_ForeColor(System.Drawing.Color.get_Red());
+		this.btnMultiply.set_Name("btnMultiply");
+		this.btnMultiply.set_TabStop(false);
+		this.btnMultiply.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnSubtract
+		// 
+		resources.ApplyResources(this.btnSubtract, "btnSubtract");
+		this.btnSubtract.set_ForeColor(System.Drawing.Color.get_Red());
+		this.btnSubtract.set_Name("btnSubtract");
+		this.btnSubtract.set_TabStop(false);
+		this.btnSubtract.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnMemoryMinus
+		// 
+		resources.ApplyResources(this.btnMemoryMinus, "btnMemoryMinus");
+		this.btnMemoryMinus.set_ForeColor(System.Drawing.Color.get_Red());
+		this.btnMemoryMinus.set_Name("btnMemoryMinus");
+		this.btnMemoryMinus.set_TabStop(false);
+		this.btnMemoryMinus.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnRandom
+		// 
+		resources.ApplyResources(this.btnRandom, "btnRandom");
+		this.btnRandom.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnRandom.set_Name("btnRandom");
+		this.btnRandom.set_TabStop(false);
+		this.btnRandom.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDivide
+		// 
+		resources.ApplyResources(this.btnDivide, "btnDivide");
+		this.btnDivide.set_ForeColor(System.Drawing.Color.get_Red());
+		this.btnDivide.set_Name("btnDivide");
+		this.btnDivide.set_TabStop(false);
+		this.btnDivide.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnModulus
+		// 
+		resources.ApplyResources(this.btnModulus, "btnModulus");
+		this.btnModulus.set_ForeColor(System.Drawing.Color.get_Red());
+		this.btnModulus.set_Name("btnModulus");
+		this.btnModulus.set_TabStop(false);
+		this.btnModulus.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnDigitSeven
+		// 
+		resources.ApplyResources(this.btnDigitSeven, "btnDigitSeven");
+		this.btnDigitSeven.set_ForeColor(System.Drawing.Color.get_Blue());
+		this.btnDigitSeven.set_Name("btnDigitSeven");
+		this.btnDigitSeven.set_TabStop(false);
+		this.btnDigitSeven.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// textBoxDisplay
+		// 
+		this.textBoxDisplay.set_BackColor(System.Drawing.Color.get_White());
+		this.textBoxDisplay.set_Cursor(System.Windows.Forms.Cursors.get_IBeam());
+		resources.ApplyResources(this.textBoxDisplay, "textBoxDisplay");
+		this.textBoxDisplay.set_Name("textBoxDisplay");
+		this.textBoxDisplay.set_ReadOnly(true);
+		this.textBoxDisplay.set_TabStop(false);
+		// 
+		// btnClearOperand
+		// 
+		this.btnClearOperand.set_BackColor(System.Drawing.Color.get_Red());
+		resources.ApplyResources(this.btnClearOperand, "btnClearOperand");
+		this.btnClearOperand.set_Name("btnClearOperand");
+		this.btnClearOperand.set_TabStop(false);
+		this.btnClearOperand.set_UseVisualStyleBackColor(false);
+		this.btnClearOperand.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnBackSpace
+		// 
+		resources.ApplyResources(this.btnBackSpace, "btnBackSpace");
+		this.btnBackSpace.set_ForeColor(System.Drawing.Color.get_Red());
+		this.btnBackSpace.set_Name("btnBackSpace");
+		this.btnBackSpace.set_TabStop(false);
+		this.btnBackSpace.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// btnCancel
+		// 
+		this.btnCancel.set_BackColor(System.Drawing.Color.get_Red());
+		resources.ApplyResources(this.btnCancel, "btnCancel");
+		this.btnCancel.set_Name("btnCancel");
+		this.btnCancel.set_TabStop(false);
+		this.btnCancel.set_UseVisualStyleBackColor(false);
+		this.btnCancel.add_Click(new System.EventHandler(this.buttonClicked));
+		// 
+		// gbModifiers
+		// 
+		this.gbModifiers.get_Controls().Add(this.tlpModifiers);
+		this.gbModifiers.set_FlatStyle(System.Windows.Forms.FlatStyle.Popup);
+		resources.ApplyResources(this.gbModifiers, "gbModifiers");
+		this.gbModifiers.set_Name("gbModifiers");
+		this.gbModifiers.set_TabStop(false);
+		// 
+		// tlpModifiers
+		// 
+		resources.ApplyResources(this.tlpModifiers, "tlpModifiers");
+		this.tlpModifiers.get_Controls().Add(this.cbInverse, 0, 0);
+		this.tlpModifiers.get_Controls().Add(this.cbHyperbolic, 1, 0);
+		this.tlpModifiers.set_Name("tlpModifiers");
+		// 
+		// cbInverse
+		// 
+		resources.ApplyResources(this.cbInverse, "cbInverse");
+		this.cbInverse.set_Name("cbInverse");
+		this.cbInverse.set_TabStop(false);
+		this.cbInverse.add_CheckedChanged(new System.EventHandler(this.inverseCheckedChanged));
+		// 
+		// cbHyperbolic
+		// 
+		resources.ApplyResources(this.cbHyperbolic, "cbHyperbolic");
+		this.cbHyperbolic.set_Name("cbHyperbolic");
+		this.cbHyperbolic.set_TabStop(false);
+		this.cbHyperbolic.add_CheckedChanged(new System.EventHandler(this.hyperbolicCheckedChanged));
+		// 
+		// gbBases
+		// 
+		resources.ApplyResources(this.gbBases, "gbBases");
+		this.gbBases.get_Controls().Add(this.tlpBases);
+		this.gbBases.set_FlatStyle(System.Windows.Forms.FlatStyle.Popup);
+		this.gbBases.set_Name("gbBases");
+		this.gbBases.set_TabStop(false);
+		// 
+		// tlpBases
+		// 
+		resources.ApplyResources(this.tlpBases, "tlpBases");
+		this.tlpBases.get_Controls().Add(this.rbBinary, 3, 0);
+		this.tlpBases.get_Controls().Add(this.rbDecimal, 1, 0);
+		this.tlpBases.get_Controls().Add(this.rbHex, 0, 0);
+		this.tlpBases.get_Controls().Add(this.rbOctal, 2, 0);
+		this.tlpBases.set_Name("tlpBases");
+		// 
+		// rbBinary
+		// 
+		resources.ApplyResources(this.rbBinary, "rbBinary");
+		this.rbBinary.set_Name("rbBinary");
+		this.rbBinary.add_CheckedChanged(new System.EventHandler(this.baseCheckedChanged));
+		// 
+		// rbDecimal
+		// 
+		resources.ApplyResources(this.rbDecimal, "rbDecimal");
+		this.rbDecimal.set_Checked(true);
+		this.rbDecimal.set_Name("rbDecimal");
+		this.rbDecimal.set_TabStop(true);
+		this.rbDecimal.add_CheckedChanged(new System.EventHandler(this.baseCheckedChanged));
+		// 
+		// rbHex
+		// 
+		resources.ApplyResources(this.rbHex, "rbHex");
+		this.rbHex.set_Name("rbHex");
+		this.rbHex.add_CheckedChanged(new System.EventHandler(this.baseCheckedChanged));
+		// 
+		// rbOctal
+		// 
+		resources.ApplyResources(this.rbOctal, "rbOctal");
+		this.rbOctal.set_Name("rbOctal");
+		this.rbOctal.add_CheckedChanged(new System.EventHandler(this.baseCheckedChanged));
+		// 
+		// gbAngles
+		// 
+		resources.ApplyResources(this.gbAngles, "gbAngles");
+		this.gbAngles.get_Controls().Add(this.tlpAngles);
+		this.gbAngles.set_FlatStyle(System.Windows.Forms.FlatStyle.Popup);
+		this.gbAngles.set_Name("gbAngles");
+		this.gbAngles.set_TabStop(false);
+		// 
+		// tlpAngles
+		// 
+		resources.ApplyResources(this.tlpAngles, "tlpAngles");
+		this.tlpAngles.get_Controls().Add(this.rbDegrees, 0, 0);
+		this.tlpAngles.get_Controls().Add(this.rbGradients, 2, 0);
+		this.tlpAngles.get_Controls().Add(this.rbRadians, 1, 0);
+		this.tlpAngles.set_Name("tlpAngles");
+		// 
+		// rbDegrees
+		// 
+		resources.ApplyResources(this.rbDegrees, "rbDegrees");
+		this.rbDegrees.set_Checked(true);
+		this.rbDegrees.set_Name("rbDegrees");
+		this.rbDegrees.set_TabStop(true);
+		this.rbDegrees.add_CheckedChanged(new System.EventHandler(this.angleCheckedChanged));
+		// 
+		// rbGradients
+		// 
+		resources.ApplyResources(this.rbGradients, "rbGradients");
+		this.rbGradients.set_Name("rbGradients");
+		this.rbGradients.add_CheckedChanged(new System.EventHandler(this.angleCheckedChanged));
+		// 
+		// rbRadians
+		// 
+		resources.ApplyResources(this.rbRadians, "rbRadians");
+		this.rbRadians.set_Name("rbRadians");
+		this.rbRadians.add_CheckedChanged(new System.EventHandler(this.angleCheckedChanged));
+		// 
+		// btnEatFocus
+		// 
+		resources.ApplyResources(this.btnEatFocus, "btnEatFocus");
+		this.btnEatFocus.set_Name("btnEatFocus");
+		this.btnEatFocus.set_TabStop(false);
+		this.btnEatFocus.add_Leave(new System.EventHandler(this.EatFocus));
+		// 
+		// tlpBasesAndAngles
+		// 
+		resources.ApplyResources(this.tlpBasesAndAngles, "tlpBasesAndAngles");
+		this.tlpBasesAndAngles.get_Controls().Add(this.gbBases, 0, 0);
+		this.tlpBasesAndAngles.get_Controls().Add(this.gbAngles, 1, 0);
+		this.tlpBasesAndAngles.set_Name("tlpBasesAndAngles");
+		// 
+		// tlpButtons
+		// 
+		resources.ApplyResources(this.tlpButtons, "tlpButtons");
+		this.tlpButtons.get_Controls().Add(this.tlpLeft, 0, 0);
+		this.tlpButtons.get_Controls().Add(this.tlpRight, 1, 0);
+		this.tlpButtons.set_Name("tlpButtons");
+		// 
+		// CalculatorForm
+		// 
+		resources.ApplyResources(this, "$this");
+		this.set_AutoScaleMode(System.Windows.Forms.AutoScaleMode.Font);
+		this.get_Controls().Add(this.tlpButtons);
+		this.get_Controls().Add(this.tlpBasesAndAngles);
+		this.get_Controls().Add(this.btnEatFocus);
+		this.get_Controls().Add(this.gbModifiers);
+		this.get_Controls().Add(this.btnCancel);
+		this.get_Controls().Add(this.btnBackSpace);
+		this.get_Controls().Add(this.btnClearOperand);
+		this.get_Controls().Add(this.textBoxDisplay);
+		this.set_FormBorderStyle(System.Windows.Forms.FormBorderStyle.FixedSingle);
+		this.set_KeyPreview(true);
+		this.set_MaximizeBox(false);
+		this.set_Name("CalculatorForm");
+		this.add_Activated(new System.EventHandler(this.EatFocus));
+		this.add_KeyPress(new System.Windows.Forms.KeyPressEventHandler(this.formKeyPress));
+		this.add_KeyUp(new System.Windows.Forms.KeyEventHandler(this.formKeyUp));
+		this.tlpLeft.ResumeLayout(false);
+		this.tlpRight.ResumeLayout(false);
+		this.gbModifiers.ResumeLayout(false);
+		this.tlpModifiers.ResumeLayout(false);
+		this.gbBases.ResumeLayout(false);
+		this.tlpBases.ResumeLayout(false);
+		this.tlpBases.PerformLayout();
+		this.gbAngles.ResumeLayout(false);
+		this.tlpAngles.ResumeLayout(false);
+		this.tlpAngles.PerformLayout();
+		this.tlpBasesAndAngles.ResumeLayout(false);
+		this.tlpBasesAndAngles.PerformLayout();
+		this.tlpButtons.ResumeLayout(false);
+		this.ResumeLayout(false);
+		this.PerformLayout();
+
+	}
+	#endregion
+
+	/**
+     * Disable components that are there for extensions.
+     */
+	private void disableExtendedComponents()
+	{
+		// disable the extensions.
+		btnCombination.set_Enabled(false);
+		btnCosine.set_Enabled(false);
+		btnTangent.set_Enabled(false);
+		btnOneByX.set_Enabled(false);
+		btnSquareRoot.set_Enabled(false);
+		btnPower.set_Enabled(false);
+		btnCube.set_Enabled(false);
+		btnFactorial.set_Enabled(false);
+		btnLog.set_Enabled(false);
+		btnRandom.set_Enabled(false);
+		btnMemoryMinus.set_Enabled(false);
+		rbHex.set_Enabled(false);
+		rbOctal.set_Enabled(false);
+		rbRadians.set_Enabled(false);
+		rbGradients.set_Enabled(false);
+		cbHyperbolic.set_Enabled(false);
+	}
+
+	/**
+	 * Initialize button to action map.
+	 */
+	private void initializeMap()
+	{
+		// Make array of hex buttons
+		btnHexDigits = new Button[16];
+		btnHexDigits[0] = btnDigitZero;
+		btnHexDigits[1] = btnDigitOne;
+		btnHexDigits[2] = btnDigitTwo;
+		btnHexDigits[3] = btnDigitThree;
+		btnHexDigits[4] = btnDigitFour;
+		btnHexDigits[5] = btnDigitFive;
+		btnHexDigits[6] = btnDigitSix;
+		btnHexDigits[7] = btnDigitSeven;
+		btnHexDigits[8] = btnDigitEight;
+		btnHexDigits[9] = btnDigitNine;
+		btnHexDigits[10] = btnDigitA;
+		btnHexDigits[11] = btnDigitB;
+		btnHexDigits[12] = btnDigitC;
+		btnHexDigits[13] = btnDigitD;
+		btnHexDigits[14] = btnDigitE;
+		btnHexDigits[15] = btnDigitF;
+
+		mapButtonToAction = new java.util.HashMap();
+
+		// Map digit buttons to corresponding digits
+		Character[] digits = Base.getHexDigits();
+		for (int i = 0; i < digits.length; i++)
+		{
+			mapButtonToAction.put(btnHexDigits[i], digits[i]);
+		}
+
+		// Map decimal button
+		mapButtonToAction.put(btnDecimal, new Character(Base.DECIMAL_SEPARATOR));
+
+		// Map operation button to corresponding operation
+		mapButtonToAction.put(btnAdd, new Addition());
+		mapButtonToAction.put(btnSubtract, new Subtraction());
+		mapButtonToAction.put(btnMultiply, new Multiplication());
+		mapButtonToAction.put(btnDivide, new Division());
+		mapButtonToAction.put(btnModulus, new Mod());
+		mapButtonToAction.put(btnEquals, new Equals());
+		mapButtonToAction.put(btnMemoryPlus, new MemoryPlus());
+		mapButtonToAction.put(btnMemorySet, new MemorySet());
+		mapButtonToAction.put(btnMemoryRead, new MemoryRead());
+		mapButtonToAction.put(btnSine, new Sine());
+		mapButtonToAction.put(btnPermutation, new Permutation());
+		mapButtonToAction.put(btnNaturalLog, new NaturalLog());
+		mapButtonToAction.put(btnExponential, new Exponential());
+		mapButtonToAction.put(btnPi, new Pi());
+		mapButtonToAction.put(btnFeMode, new FEMode());
+		mapButtonToAction.put(btnSquare, new Square());
+
+		// Map operation keys to corresponding operation
+		mapButtonToAction.put(new Character('-'),
+			mapButtonToAction.get(btnSubtract));
+		mapButtonToAction.put(new Character('+'),
+			mapButtonToAction.get(btnAdd));
+		mapButtonToAction.put(new Character('*'),
+			mapButtonToAction.get(btnMultiply));
+		mapButtonToAction.put(new Character('/'),
+			mapButtonToAction.get(btnDivide));
+		mapButtonToAction.put(new Character('%'),
+			mapButtonToAction.get(btnModulus));
+		mapButtonToAction.put(new Character('='),
+			mapButtonToAction.get(btnEquals));
+
+		// Map the special buttons to keys
+		mapButtonToAction.put(btnUnaryMinus, Keys.OemMinus);
+		mapButtonToAction.put(btnBackSpace, Keys.Back);
+		mapButtonToAction.put(btnClearOperand, Keys.Delete);
+		mapButtonToAction.put(btnCancel, Keys.Escape);
+
+		// And finally map these special keys to themselves for action
+		mapButtonToAction.put(Keys.Back, Keys.Back);
+		mapButtonToAction.put(Keys.Delete, Keys.Delete);
+		mapButtonToAction.put(Keys.Escape, Keys.Escape);
+		mapButtonToAction.put(Keys.Enter, Keys.Enter);
+
+	}
+
+	/**
+	 * Handle button clicked event
+	 */
+	private void buttonClicked(Object sender, System.EventArgs e)
+	{
+		Object action = mapButtonToAction.get(sender);
+		if (action instanceof Operation)
+		{
+			Engine.enterOperation((Operation)action);
+
+			// In case of trignometric operation, inv and hyp are reset.
+			// Re-sync to ensure values reflect the changes.
+			cbInverse.set_Checked(Engine.getMode().getInverse());
+			cbHyperbolic.set_Checked(Engine.getMode().getHyperbolic());
+		}
+		else if (action instanceof Character)
+		{
+			Engine.enterDigitOrDecimal(((Character)action).charValue());
+		}
+		else if (action instanceof Keys)
+		{
+			Engine.enterSpecialKeys((Keys)action);
+		}
+	}
+
+	/**
+	 * Handle key press event for the form. Special keys are not handled here.
+	 */
+	private void formKeyPress(Object sender, KeyPressEventArgs e)
+	{
+		e.set_Handled(true);
+		char key = e.get_KeyChar();
+
+		// Some keys are considered operations. Map these.
+		// Ignore special keys here as these will be handled by key up event.
+		Object action = mapButtonToAction.get(new Character(key));
+		if (action instanceof Operation)
+		{
+			Engine.enterOperation((Operation)action);
+		}
+		else if (Base.isHexDigit(key) || key == Base.DECIMAL_SEPARATOR)
+		{
+			Engine.enterDigitOrDecimal(key);
+		}
+	}
+
+	/**
+	 * Handle key up event for the form for the special keys.
+	 */
+	private void formKeyUp(Object sender, KeyEventArgs e)
+	{
+		e.set_Handled(true);
+
+		// Handle special keys here. Rest are already handled by key press event.
+		Object action = mapButtonToAction.get(e.get_KeyData());
+		if (action instanceof Keys)
+		{
+			Engine.enterSpecialKeys((Keys)action);
+		}
+	}
+
+	/**
+	 * Handle base change.
+	 */
+	private void baseCheckedChanged(Object sender, System.EventArgs e)
+	{
+		Base base = Base.TEN; // default
+		if (rbBinary.get_Checked())
+		{
+			base = Base.TWO;
+		}
+		else if (rbOctal.get_Checked())
+		{
+			base = Base.EIGHT;
+		}
+		else if (rbHex.get_Checked())
+		{
+			base = Base.SIXTEEN;
+		}
+
+		Engine.setBase(base);
+		setBase(base);
+	}
+
+	/**
+	 * Handle angle change.
+	 */
+	private void angleCheckedChanged(Object sender, System.EventArgs e)
+	{
+		AngleMode angle = AngleMode.Degrees; // default
+		if (rbRadians.get_Checked())
+		{
+			angle = AngleMode.Radians;
+		}
+		else if (rbGradients.get_Checked())
+		{
+			angle = AngleMode.Gradients;
+		}
+
+		Engine.getMode().setAngle(angle);
+	}
+
+	/**
+	 * Handle inverse check/uncheck.
+	 */
+	private void inverseCheckedChanged(Object sender, System.EventArgs e)
+	{
+		Engine.getMode().setInverse(cbInverse.get_Checked());
+	}
+
+	/**
+	 * Handle hyperbolic check/uncheck.
+	 */
+	private void hyperbolicCheckedChanged(Object sender, System.EventArgs e)
+	{
+		Engine.getMode().setHyperbolic(cbHyperbolic.get_Checked());
+	}
+
+	/**
+	 * Force focus on the hidden button.
+	 */
+	private void EatFocus(Object sender, System.EventArgs e)
+	{
+		// Always have the focus on this hidden button to prevent blinking
+		// caret in text box and disabling tabs etc.
+		btnEatFocus.Focus();
+	}
+
+	/**
+	 * Enables/disables controls according to base change.
+	 */
+	private void setBase(Base base)
+	{
+		int radix = base.getRadix();
+
+		// Enable digit buttons till radix
+		for (int i = 0; i < radix; i++)
+		{
+			btnHexDigits[i].set_Enabled(true);
+		}
+
+		// Disable remaining digits
+		for (int i = radix; i < btnHexDigits.length; i++)
+		{
+			btnHexDigits[i].set_Enabled(false);
+		}
+
+		// Enable/disable these Base10 only buttons
+		boolean isBase10 = (base == Base.TEN);
+		gbAngles.set_Enabled(isBase10);
+		gbModifiers.set_Enabled(isBase10);
+		btnFeMode.set_Enabled(isBase10);
+		btnPi.set_Enabled(isBase10);
+		btnDecimal.set_Enabled(isBase10);
+		btnSine.set_Enabled(isBase10);
+
+		// Uncomment once these extensions are implemented
+		// btnCosine.set_Enabled(isBase10);
+		// btnTangent.set_Enabled(isBase10);
+	}
+}

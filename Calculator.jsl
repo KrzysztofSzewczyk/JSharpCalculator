@@ -1,0 +1,29 @@
+package calculator;
+
+import calculator.ui.CalculatorForm;
+import calculator.model.Engine;
+import System.Windows.Forms.Application;
+
+/**
+ * The main class
+ */
+public class Calculator
+{
+	/**
+	 * The main entry point
+	 */
+	/** @attribute System.STAThread() */
+	public static void main(String[] args)
+	{
+		// Create the main form class
+		CalculatorForm view = new CalculatorForm();
+
+		// Set the view as observer
+		Engine.getDisplay().addObserver(view);
+		Engine.reset();
+
+		// Run the form
+		Application.EnableVisualStyles();
+		Application.Run(view);
+	}
+}

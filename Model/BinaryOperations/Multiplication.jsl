@@ -1,0 +1,16 @@
+package calculator.model.binaryOperations;
+
+import calculator.model.*;
+
+public class Multiplication extends BinaryOperation
+{
+	public double operateBinary(double firstNumber, double secondNumber)
+	{
+		return (firstNumber * secondNumber);
+	}
+
+	public Precedence getPrecedence()
+	{
+		return Precedence.Multiplication;
+	}
+}

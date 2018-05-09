@@ -1,0 +1,17 @@
+package calculator.model;
+
+/**
+ * Interface that all operation need to implement.
+ */
+public interface Operation
+{
+	/**
+	 * Gets the type of Operation - Unary, Binary or Zeroary
+	 */
+	public OperationType getType();
+
+	/**
+	 * Defines the operation of the respective operator
+	 */
+	public void operate(OperandStack ops);
+}

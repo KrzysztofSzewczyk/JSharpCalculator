@@ -1,0 +1,19 @@
+package calculator.model;
+
+/**
+ * Precedence of operators in increasing order.
+ */
+public enum Precedence
+{
+	Lowest,                     // imaginary lowest
+
+	Subtraction,
+	Addition(Subtraction),      // same as Subtraction
+	Multiplication,
+	Division(Multiplication),   // same as Multiplication
+	Combination,
+	Permutation,
+	Power,
+	Mod
+}
+

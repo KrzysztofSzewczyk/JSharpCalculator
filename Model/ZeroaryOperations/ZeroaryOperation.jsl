@@ -1,0 +1,14 @@
+﻿package calculator.model.zeroaryOperations;
+
+import calculator.model.*;
+
+/**
+ * Base class for zero-ary operations like PI
+ */
+abstract public class ZeroaryOperation implements Operation
+{
+	public OperationType getType()
+	{
+		return OperationType.Zeroary;
+	}
+}

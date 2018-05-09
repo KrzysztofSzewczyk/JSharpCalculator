@@ -1,0 +1,19 @@
+package calculator.model.binaryOperations;
+
+import calculator.model.*;
+
+public class Mod extends BinaryOperation
+{
+	public double operateBinary(double dividend, double divisor)
+	{
+		if (divisor == 0)
+			throw new OperationParameterException("Cannot divide by zero.");
+
+		return (dividend % divisor);
+	}
+
+	public Precedence getPrecedence()
+	{
+		return Precedence.Mod;
+	}
+}

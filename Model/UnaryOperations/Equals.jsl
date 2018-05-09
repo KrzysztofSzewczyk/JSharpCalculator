@@ -1,0 +1,17 @@
+package calculator.model.unaryOperations;
+
+import calculator.model.*;
+
+public class Equals extends UnaryOperation
+{
+	public void operate(OperandStack ops)
+	{
+		Engine.evaluate();
+	}
+
+	public double operateUnary(double unOp)
+	{
+		// dummy implementation - should not get called.
+		return 0;
+	}
+}

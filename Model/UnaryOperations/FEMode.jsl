@@ -1,0 +1,13 @@
+package calculator.model.unaryOperations;
+
+import calculator.model.*;
+
+public class FEMode extends UnaryOperation
+{
+	public double operateUnary(double operand)
+	{
+		// set display mode.
+		Engine.getMode().setFEMode(!Engine.getMode().getFEMode());
+		return operand;
+	}
+}

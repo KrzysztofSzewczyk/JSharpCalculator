@@ -1,0 +1,45 @@
+package calculator.model;
+
+import java.util.*;
+
+/**
+ * A wrapper around java.util.Stack use to provide stack of Operation objects.
+ */
+public class OperationStack
+{
+	/**
+	 * Add Operation object to the top of stack.
+	 */
+	public void push(Operation operation)
+	{
+		operationStack.push(operation);
+	}
+
+	/**
+	 * Remove Operation object from the top of stack.
+	 */
+	public Operation pop()
+	{
+		return (Operation)operationStack.pop();
+	}
+
+	/**
+	 * Returns true if empty.
+	 */
+	public boolean empty()
+	{
+		return operationStack.empty();
+	}
+
+	/**
+	 * Clear the stack
+	 */
+	public void clear()
+	{
+		operationStack.clear();
+	}
+
+	// The inner stack
+	private Stack operationStack = new Stack();
+}
+

@@ -1,0 +1,25 @@
+package calculator.model.binaryOperations;
+
+import calculator.model.*;
+
+/**
+ * Base class for all binary operations like addition, subtraction etc.
+ */
+abstract public class BinaryOperation implements Operation
+{
+	public void operate(OperandStack ops)
+	{
+		double op2 = ops.pop();
+		double op1 = ops.pop();
+		ops.push(operateBinary(op1, op2));
+	}
+
+	public OperationType getType()
+	{
+		return OperationType.Binary;
+	}
+
+	// abstract method for all the binary operations
+	abstract public double operateBinary(double op1, double op2);
+	abstract public Precedence getPrecedence();
+}

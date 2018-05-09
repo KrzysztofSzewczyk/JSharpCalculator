@@ -1,0 +1,54 @@
+package calculator.model;
+
+import java.util.*;
+
+/**
+ * A wrapper around java.util.Stack use to provide stack of Operation objects.
+ */
+public class OperandStack
+{
+	/**
+	 * Add operand to the top of stack.
+	 */
+	public void push(double operand)
+	{
+		// throw an exception if the value is not valid or +/- infinite
+		if (Double.isNaN(operand))
+			throw new OperationParameterException("Result of function is undefined.");
+
+		if (operand == Double.POSITIVE_INFINITY)
+			throw new OperationParameterException("Infinity");
+
+		if (operand == Double.NEGATIVE_INFINITY)
+			throw new OperationParameterException("-Infinity");
+
+		operandStack.push(new Double(operand));
+	}
+
+	/**
+	 * Remove operand from the top of stack.
+	 */
+	public double pop()
+	{
+		return ((Double)operandStack.pop()).doubleValue();
+	}
+
+	/**
+	 * Peek the value at the top without removing it.
+	 */
+	public double peek()
+	{
+		return ((Double)operandStack.peek()).doubleValue();
+	}
+
+	/**
+	 * Clear the stack
+	 */
+	public void clear()
+	{
+		operandStack.clear();
+	}
+
+	// The inner stack object
+	private Stack operandStack = new Stack();
+}

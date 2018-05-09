@@ -1,0 +1,82 @@
+package calculator.model.mode;
+
+/**
+ * Class to store the current calculator mode.
+ */
+public class Mode
+{
+	/**
+	 * The default values are AngleMode is Degrees, hyp and inv are false,
+	 * fixed mode is true and base is ten.
+	 */
+	public Mode()
+	{
+		base = Base.TEN;
+		angle = AngleMode.Degrees;
+	}
+
+	// accessor methods
+	public Base getBase()
+	{
+		return base;
+	}
+
+	public void setBase(Base value)
+	{
+		base = value;
+	}
+
+	public void setAngle(AngleMode value)
+	{
+		angle = value;
+	}
+
+	public AngleMode getAngle()
+	{
+		return angle;
+	}
+
+	public void setInverse(boolean value)
+	{
+		inv = value;
+	}
+
+	public boolean getInverse()
+	{
+		return inv;
+	}
+
+	public void setHyperbolic(boolean value)
+	{
+		hyp = value;
+	}
+
+	public boolean getHyperbolic()
+	{
+		return hyp;
+	}
+
+	public void setFEMode(boolean value)
+	{
+		fixedMode = value;
+	}
+
+	public boolean getFEMode()
+	{
+		return fixedMode;
+	}
+
+	public void reset()
+	{
+		inv = false;
+		hyp = false;
+		fixedMode = true;
+	}
+
+	// private variables
+	private Base base;
+	private AngleMode angle;
+	private boolean hyp;
+	private boolean inv;
+	private boolean fixedMode;
+}

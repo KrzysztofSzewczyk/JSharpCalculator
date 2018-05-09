@@ -1,0 +1,11 @@
+package calculator.model.mode;
+
+/**
+ * Possible units for Angle
+ */
+public enum AngleMode
+{
+	Degrees,
+	Radians,    // Radians is not implemented
+	Gradients   // Gradients is not implemented
+}

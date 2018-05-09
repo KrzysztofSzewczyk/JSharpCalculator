@@ -1,0 +1,311 @@
+package calculator.model;
+
+import java.util.*;
+import calculator.ui.*;
+import calculator.model.mode.*;
+import calculator.model.zeroaryOperations.*;
+import calculator.model.unaryOperations.*;
+import calculator.model.binaryOperations.*;
+import calculator.model.memoryOperations.*;
+import System.Console;
+import System.Windows.Forms.Keys;
+
+/**
+ * The controller class for the calculator.
+ */
+public final class Engine
+{
+	private static Operation equals = new Equals();
+	/**
+	 * Get the error state of the Engine
+	 */
+	public static boolean getErrorState()
+	{
+		return errorState;
+	}
+
+	/**
+	 * Get the Mode for this calculator
+	 */
+	public static Mode getMode()
+	{
+		return mode;
+	}
+
+	/**
+	 * Get the Display for this calculator
+	 */
+	public static Display getDisplay()
+	{
+		return display;
+	}
+
+	/**
+	 * Set the base of display - default is 10
+	 */
+	public static void setBase(Base base)
+	{
+		// Do it if not same
+		if (base != mode.getBase())
+		{
+			double num = mode.getBase().toDouble(display.toString());
+			mode.setBase(base);
+			String strDisplay = mode.getBase().fromDouble(num, mode.getFEMode());
+			display.setDisplay(strDisplay);
+		}
+	}
+
+	/**
+	 * Take appropriate action for the digit/decimal entered.
+	 */
+	public static void enterDigitOrDecimal(char digit)
+	{
+		boolean success = false;
+
+		// handle error state.
+		if (!errorState)
+		{
+			// Other char - check whether it is valid?
+			if (display.canChange())
+			{
+				// The input char needs to added to the display
+				if (mode.getBase().isValidChar(digit, display.toString()))
+				{
+					lastInputIsBinaryOperation = false;
+					success = display.appendChar(digit);
+				}
+			}
+			else
+			{
+				// The input is new number - i.e. display is 0
+				if (mode.getBase().isValidChar(digit, String.valueOf(Base.ZERO_DIGIT)))
+				{
+					if (!lastInputIsBinaryOperation)
+					{
+						// Display cannot change and waiting for another
+						// operand. Clean both the stacks.
+						operandStack.clear();
+						operationStack.clear();
+					}
+
+					display.clear();
+					lastInputIsBinaryOperation = false;
+					success = display.appendChar(digit);
+				}
+			}
+		}
+
+		if (!success)
+		{
+			Console.Beep();
+		}
+	}
+
+	/**
+	 * Perform an operation that is entered.
+	 */
+	public static void enterOperation(Operation op)
+	{
+		// handle error state.
+		if (errorState)
+		{
+			Console.Beep();
+			return;
+		}
+
+		try
+		{
+			String strDisplay;
+
+			if (op.getType() == OperationType.Zeroary)
+			{
+				// No need to put operand on stack
+				op.operate(operandStack);
+				lastInputIsBinaryOperation = false;
+				strDisplay = mode.getBase().fromDouble(operandStack.pop(),
+					mode.getFEMode());
+			}
+			else if (op.getType() == OperationType.Unary)
+			{
+				// Put operand on stack and operate
+				operandStack.push(mode.getBase().toDouble(display.toString()));
+				op.operate(operandStack);
+				lastInputIsBinaryOperation = false;
+				strDisplay = mode.getBase().fromDouble(operandStack.pop(),
+					mode.getFEMode());
+			}
+			else // OperationType.Binary
+			{
+				// Put operand on stack for operation to operate
+				operandStack.push(mode.getBase().toDouble(display.toString()));
+
+				if (lastInputIsBinaryOperation)
+				{
+					// A binary operation is pending on stack. Remove it.
+					operationStack.pop();
+				}
+
+				// If the precedence is lower than the lowest, evaluate
+				BinaryOperation binOp = (BinaryOperation)op;
+				if ((int)binOp.getPrecedence() <= (int)lowestPrecedence)
+				{
+					evaluate();
+				}
+
+				// Update lowest precedence
+				if (lowestPrecedence == Precedence.Lowest)
+				{
+					// set the lowest precedence.
+					lowestPrecedence = binOp.getPrecedence();
+				}
+
+				// Push this operation onto stack even if results so far
+				// has been already evaluated and update the display
+				operationStack.push(op);
+				lastInputIsBinaryOperation = true;
+				strDisplay = mode.getBase().fromDouble(operandStack.peek(),
+					mode.getFEMode());
+			}
+
+			display.setDisplay(strDisplay);
+		}
+		catch (OperationParameterException ex)
+		{
+			errorState = true;
+			display.setDisplay(ex.get_Message());
+		}
+	}
+
+	/**
+	 * Act on special key that was pressed.
+	 */
+	public static void enterSpecialKeys(Keys keys)
+	{
+		boolean success = false;
+
+		switch (keys)
+		{
+			case Keys.Escape: // Cancel button
+				reset();
+				success = true;
+				break;
+
+			case Keys.Delete: // Clear button
+				if (errorState)
+				{
+					reset();
+				}
+				else
+				{
+					display.clear();
+				}
+
+				success = true;
+				break;
+
+			case Keys.Back:
+				if (!errorState)
+				{
+					success = display.removeChar();
+				}
+				break;
+
+			case Keys.OemMinus:
+				if (!errorState)
+				{
+					success = display.toggleMinus();
+				}
+				break;
+			case Keys.Enter:
+				if (!errorState)
+				{
+					enterOperation(equals);
+					success = true;
+				}
+				break;
+			default:
+				break;
+		}
+
+		if (!success)
+		{
+			Console.Beep();
+		}
+	}
+
+	/**
+	 * Evaluate the operand/operation stack
+	 */
+	public static void evaluate()
+	{
+		// Evaluate the expression in stack.
+		// do until the operation stack is empty.
+		while (!operationStack.empty())
+		{
+			// Pop an operation and operate on it.
+			operationStack.pop().operate(operandStack);
+		}
+
+		lowestPrecedence = Precedence.Lowest;
+	}
+
+	/**
+	 * Reset the engine - used to Cancel operation
+	 */
+	public static void reset()
+	{
+		lastInputIsBinaryOperation = false;
+		lowestPrecedence = Precedence.Lowest;
+		errorState = false;
+
+		operandStack.clear();
+		operationStack.clear();
+		display.clear();
+
+		// Reset mode
+		mode.reset();
+	}
+
+	/**
+	 * Do NOT allow creating instance of this class
+	 */
+	private Engine()
+	{
+	}
+
+	/**
+	 * Stores whether the last input was a binary operation or not.
+	 */
+	private static boolean lastInputIsBinaryOperation;
+
+	/**
+	 * The lowest operator precedence in the expression being entered.
+	 */
+	private static Precedence lowestPrecedence = Precedence.Lowest;
+
+	/**
+	 * Stores the error state - in error state Engine does not do anything
+	 * unless CE or C is pressed.
+	 */
+	private static boolean errorState;
+
+	/**
+	 * Stack of Operation for the current expression.
+	 */
+	private static OperationStack operationStack = new OperationStack();
+
+	/**
+	 * Stack of Operand for the current expression.
+	 */
+	private static OperandStack operandStack = new OperandStack();
+
+	/**
+	 * The current calculator mode - Angle mode, Inverse mode, and base.
+	 */
+	private static Mode mode = new Mode();
+
+	/**
+	 * The display after handling each input (digit/operation).
+	 */
+	private static Display display = new Display();
+}

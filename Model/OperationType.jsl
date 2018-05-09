@@ -1,0 +1,11 @@
+package calculator.model;
+
+/**
+ * Type of operation.
+ */
+public enum OperationType
+{
+	Zeroary,    // work without any argument, like Pi
+	Unary,      // needs one argument, like square
+	Binary      // need two arguments, like addition.
+}

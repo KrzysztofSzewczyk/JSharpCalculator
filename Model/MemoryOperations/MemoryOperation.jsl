@@ -1,0 +1,14 @@
+package calculator.model.memoryOperations;
+
+import calculator.model.*;
+
+/**
+ * Base class for all memory operations like M+, M- etc.
+ */
+abstract public class MemoryOperation implements Operation
+{
+	/**
+	 * For memory storage (M+ etc operations).
+	 */
+	protected static double memory;
+}

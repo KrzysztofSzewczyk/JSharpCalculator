@@ -1,0 +1,52 @@
+package calculator.model.unaryOperations;
+
+import calculator.model.*;
+import calculator.model.mode.*;
+
+public class Sine extends UnaryOperation
+{
+	public double operateUnary(double operand)
+	{
+		AngleMode angle = Engine.getMode().getAngle();
+		if (Engine.getMode().getInverse())
+		{
+			// For sine inverse case, the value should be range of -1 to 1.
+			if ((operand < -1) || (operand > 1))
+			{
+				throw new OperationParameterException("Invalid Input For Sine Function");
+			}
+
+			double sineInverse = Math.asin(operand);
+			if (angle == AngleMode.Degrees)
+			{
+				sineInverse = Math.toDegrees(sineInverse);
+			}
+
+			Engine.getMode().setInverse(false);
+			return sineInverse;
+		}
+		else
+		{
+			// The sine case
+			if (angle == AngleMode.Degrees)
+			{
+				// The sine function is cyclic. Hence to avoid calculation
+				// error because of rounding off, convert the angle to
+				// equivalent value < 180 degrees.
+				if (Math.abs((operand % 360) / 180) > 1)
+				{
+					operand = operand % 180 * -1;
+				}
+				else
+				{
+					operand = operand % 180;
+				}
+
+				operand = Math.toRadians(operand);
+			}
+
+			return Math.sin(operand);
+		}
+	}
+}
+

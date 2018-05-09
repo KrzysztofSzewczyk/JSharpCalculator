@@ -1,0 +1,299 @@
+package calculator.model.mode;
+
+import calculator.model.OperationParameterException;
+import java.text.DecimalFormatSymbols;
+
+/**
+ * Base class for different number bases.
+ */
+public class Base
+{
+	public static final Base TWO = new BaseTwo();
+	public static final Base EIGHT = new BaseEight();
+	public static final Base TEN = new BaseTen();
+	public static final Base SIXTEEN = new BaseSixteen();
+
+	// Culture dependent constants
+	public static final char DECIMAL_SEPARATOR;
+	public static final char MINUS_SIGN;
+	public static final char PLUS_SIGN;
+	public static final char ZERO_DIGIT;
+
+	static
+	{
+		DecimalFormatSymbols dfs = new DecimalFormatSymbols();
+		DECIMAL_SEPARATOR = dfs.getDecimalSeparator();
+		MINUS_SIGN = dfs.getMinusSign();
+		PLUS_SIGN = '+';
+		ZERO_DIGIT = dfs.getZeroDigit();
+	}
+
+	/**
+	 * Returns array of all hex digits.
+	 */
+	public static final Character[] getHexDigits()
+	{
+		Character[] digits = new Character[HEX];
+		for (int i = 0; i < HEX; i++)
+		{
+			digits[i] = new Character(Character.forDigit(i, HEX));
+		}
+
+		return digits;
+	}
+
+	/**
+	 * Returns true if the char is a hex digit.
+	 */
+	public static final boolean isHexDigit(char ch)
+	{
+		return (Character.digit(ch, HEX) != -1);
+	}
+
+	/**
+	 * Get the radix for this base
+	 */
+	public int getRadix()
+	{
+		return radix;
+	}
+
+	/**
+	 * Convert string to double
+	 */
+	public double toDouble(String display)
+	{
+		throw new OperationParameterException(NOT_IMPLEMENTED);
+	}
+
+	/**
+	 * Convert double to string based on FE mode
+	 */
+	public String fromDouble(double op, boolean feMode)
+	{
+		throw new OperationParameterException(NOT_IMPLEMENTED);
+	}
+
+	/**
+	 * Is valid char?
+	 */
+	public boolean isValidChar(char ch, String display)
+	{
+		throw new OperationParameterException(NOT_IMPLEMENTED);
+	}
+
+	/**
+	 * Returns true if the char is a digit in this base.
+	 */
+	protected boolean isDigitInThisBase(char ch)
+	{
+		return (Character.digit(ch, radix) != -1);
+	}
+
+	protected Base(int radix, int max_len)
+	{
+		this.radix = radix;
+		this.max_len = max_len;
+	}
+
+	protected int radix;
+	protected int max_len;
+
+	private static final int HEX = 16;
+	private static final String NOT_IMPLEMENTED = "Base not implemented.";
+}
+
+class BaseTwo extends Base
+{
+	public double toDouble(String display)
+	{
+		long value;
+		int length = display.length();
+		if ((length < max_len) ||
+			(length == max_len && display.charAt(0) == MINUS_SIGN))
+		{
+			// +ve number or -ve number with minus sign. Parse it normally
+			value = Long.parseLong(display, radix);
+		}
+		else if (Character.digit(display.charAt(0), radix) == 1)
+		{
+			// Signed bit is set as length == max_len and most significant
+			// digit is 1. Remove sign bit, parse and subtract MIN_VALUE
+			// to get the resultant double value.
+			String unsignedStr = display.substring(1);
+			value = Long.parseLong(unsignedStr, radix) - Long.MIN_VALUE;
+		}
+		else
+		{
+			// Both minus sign and signed bit are set.
+			// Remove sign bit, parse and subtract from MIN_VALUE
+			// to get the resultant double value.
+			String unsignedStr = display.substring(2);
+			value = Long.MIN_VALUE - Long.parseLong(unsignedStr, radix);
+		}
+
+		return value;
+	}
+
+	public String fromDouble(double op, boolean feMode)
+	{
+		return Long.toBinaryString((long)op);
+	}
+
+	public boolean isValidChar(char ch, String display)
+	{
+		// is digit and length < max_len
+		return (isDigitInThisBase(ch) && (display.length() < max_len));
+	}
+
+	BaseTwo()
+	{
+		super(2, 64);
+	}
+}
+
+// Class not implemented
+class BaseEight extends Base
+{
+	BaseEight()
+	{
+		super(8, 22);
+	}
+}
+
+class BaseTen extends Base
+{
+	public double toDouble(String display)
+	{
+		double d = 0.0;
+		try
+		{
+			d = java.text.NumberFormat.getInstance().parse(display).doubleValue();
+		}
+		catch (java.text.ParseException jtp) { }
+		return d;
+	}
+
+	public String fromDouble(double op, boolean feMode)
+	{
+		// Use modifier to get the String in proper format.
+		String strNum = ((System.Double)op).ToString("g");
+
+		// If not fixed mode and string does not contain exponent,
+		// convert the string into an exponent string.
+		if (!feMode && strNum.indexOf(E_SYMBOL) == -1)
+		{
+			// Convert buffer to exponential mode
+			strNum = convertToExponentialString(op);
+		}
+
+		return strNum;
+	}
+
+	public boolean isValidChar(char ch, String display)
+	{
+		boolean valid = false;
+		if (display.length() < max_len)
+		{
+			if (isDigitInThisBase(ch))
+			{
+				valid = true;
+			}
+			else if (ch == DECIMAL_SEPARATOR)
+			{
+				if (display.indexOf(DECIMAL_SEPARATOR) == -1)
+				{
+					// decimal is not there.
+					valid = true;
+				}
+			}
+		}
+
+		return valid;
+	}
+
+	/**
+	 * Convert to exponential mode
+	 */
+	private static String convertToExponentialString(double op)
+	{
+		if (op == 0)
+		{
+			// Return the exponential format for 0.
+			final String format = "" + ZERO_DIGIT + E_SYMBOL + PLUS_SIGN + ZERO_DIGIT;
+			return format;
+		}
+
+		boolean minus = false;
+		boolean exponentMinus = false;
+		int exponent = 0;
+
+		if (op < 0)
+		{
+			// -ve number - note it and convert it to +ve
+			op *= -1;
+			minus = true;
+		}
+
+		// Get the exponent of the number.
+		if (op < 1)
+		{
+			exponentMinus = true;
+
+			// Do log10 to get exponent and round it off on the higher side.
+			// Multiple by 10 power exponent to get proper number.
+			exponent = -(int)System.Math.Log10(op) + 1;
+			op *= Math.pow(10, exponent);
+		}
+		else
+		{
+			// Do log10 to get exponent and round it off on the lower side.
+			// Divide by 10 power exponent to get proper number.
+			exponent = (int)System.Math.Log10(op);
+			op /= Math.pow(10, exponent);
+		}
+
+		// Use buffer
+		StringBuffer buf = new StringBuffer();
+
+		// number sign
+		if (minus)
+		{
+			buf.append(MINUS_SIGN);
+		}
+
+		// Add op as fixed point now
+		buf.append(((System.Double)op).ToString());
+		buf.append(E_SYMBOL);
+
+		// add exponent sign
+		if (exponentMinus)
+		{
+			buf.append(MINUS_SIGN);
+		}
+		else
+		{
+			buf.append(PLUS_SIGN);
+		}
+
+		buf.append(exponent);
+
+		return buf.toString();
+	}
+
+	BaseTen()
+	{
+		super(10, 32);
+	}
+
+	private static final char E_SYMBOL = 'e';
+}
+
+// Class not implemented
+class BaseSixteen extends Base
+{
+	BaseSixteen()
+	{
+		super(16, 16);
+	}
+}

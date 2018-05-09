@@ -1,0 +1,20 @@
+package calculator.model.binaryOperations;
+
+import calculator.model.*;
+
+public class Division extends BinaryOperation
+{
+	public double operateBinary(double firstNumber, double secondNumber)
+	{
+		if (secondNumber == 0)
+			throw new OperationParameterException("Cannot divide by zero.");
+
+		return (firstNumber / secondNumber);
+	}
+
+	public Precedence getPrecedence()
+	{
+		return Precedence.Division;
+	}
+}
+
